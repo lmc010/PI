@@ -1,0 +1,364 @@
+body{
+    background-image:#ffffff;
+    height: 185vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxMenu{
+    position: fixed;
+}
+
+.navbar{
+    background-color: #D926D9;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.inputNavbar{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-top: 25px;
+    border: 2px solid #ffffff;
+    background-color: #F2F2F2;
+    opacity: 0.50;
+    
+}
+
+::placeholder{
+    color: #848484;
+    font-weight: bold;
+}
+
+
+.magnifyingGlass{
+    width: 20px;
+    height: 20px;
+    margin-left: 620px;
+    margin-top: -25px;
+    display: flex;
+    flex: row wrap;
+}
+
+.photo{
+    width: 70px;
+    height: 70px;
+    margin-left: 1080px;
+    margin-top: -50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sidebarMenu{
+    background-image:linear-gradient(rgb(214, 77, 238),#845bf4);
+    margin-top: 35px;
+    width: 250px;
+    left: -250px;
+    height: 620px;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    
+}
+
+label{
+    padding: 15px;
+    position: absolute;
+    cursor: pointer;
+    
+}
+
+label img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+
+
+.menuIcon{
+    margin-top: -145px;
+    margin-left: -110px;
+}
+
+.menuIcon label{
+    background-color: #D926D9;
+    border-radius: 5px;
+}
+
+.sidebarMenu .logo{
+    width: 80px;
+    height: 80px;
+    margin-top: 45px;
+}
+
+.sidebarMenu img{
+     margin-top: -500px;
+     width: 60px;
+     margin-left: 40px;
+}
+
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+ul{
+    top:120px;
+    position:absolute;
+    text-decoration: none;
+    
+}
+
+
+
+li a{
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    width: 215px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+label h1{
+    color: #000000;
+    position: relative;
+}
+
+li a:hover{
+    background-color: #952B95;
+    color: white;
+    
+}
+#check:checked ~ .sidebarMenu{
+    left: 0;
+}
+
+.close{
+    margin-left: -40px;
+    margin-top: 298px;
+}
+
+.iconUser{
+    width: 400px;
+    height: 190px;
+    display: flex;
+    flex: row wrap;
+    margin-left: 110px;
+    margin-top: -60px;
+    
+}
+
+
+<<<<<<< HEAD
+.editImage{
+=======
+
+
+
+
+
+
+
+
+.edit-image{
+>>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
+    border: 1px solid black;
+    border-radius: 10px;
+    width:600px ;
+    height: 670px;
+    margin-left:310px;
+
+}
+
+.editImage h1{
+    font-size: 30px;
+    margin-left: 220px;
+    color: #952B95;
+}
+
+.link{
+    font-size: 50px;
+    margin-left: 520px;
+    margin-top: -200px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    color: red;
+}
+
+
+label{
+    margin-left: 140px;
+    margin-top: 70px;
+    color: #952B95;
+}
+
+.surname{
+     margin-top: 15px;
+     margin-left: 100px;
+}
+
+
+.email{
+    margin-top: 15px;
+    margin-left: 140px;
+}
+
+.inputName{
+    background-color: transparent;
+    border-radius: 5px;
+    margin-left:215px;
+    margin-top: 85px;
+    border: 1px solid;
+}
+
+.inputLastname{
+    background-color: transparent;
+    border-radius: 5px;
+    margin-left:215px;
+    margin-top: 30px;
+    border: 1px solid;
+    
+}
+
+
+.inputEmail{
+    background-color: transparent;
+    border-radius: 5px;
+    margin-left:215px;
+    margin-top: 30px;
+    border: 1px solid;
+}
+
+.editImage p{
+    margin-left: 420px;
+    color:#952B95;
+}
+
+.rotate{
+    width:40px;
+    height: 40px;
+    margin-left: 420px;
+    margin-top: -250px;
+    cursor: pointer; 
+    color:#952B95;
+}
+
+.editImage p{
+    cursor: pointer;
+    margin-top: -110px;
+}
+
+.editImage p:hover{
+    text-decoration: underline;
+}
+
+
+.editImage h2{
+   color: black;
+   text-decoration: none;
+}
+
+
+
+.edit{
+    margin-left: 50px;
+    
+}
+
+.edit:hover{
+    color: red;
+}
+
+.upload{
+    margin-left: 70px;
+    
+}
+
+.editBar{
+    border-top: 1px solid black;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+.delete{
+    margin-left: 260px;
+    
+}
+
+
+.h1-editar {
+    margin-left: -30px;
+    flex: row wrap;
+    display: inline;
+    cursor: pointer;
+}
+
+.div-h1 h1{
+    margin-left: 40px;
+    font-size: 22px;
+    flex: row wrap;
+    display: inline;
+    padding: 4px;
+    font-weight: 400;
+    color: dodgerblue;
+}
+
+.div-h1 h1:hover{
+    text-decoration: underline;
+}
+
+.h1-upload{
+    cursor: pointer;
+}
+
+.div-h1-2 h1{
+    font-size:25px;
+    font-weight: 400;
+    margin-left: 207px;
+    color: dodgerblue;
+}
+
+.div-h1-2{
+    margin-top: -32px;
+    margin-left: 270px;
+}
+
+.h1-excluir{
+    cursor: pointer;
+}
+
+.h1-excluir:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
