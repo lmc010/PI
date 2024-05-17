@@ -14,7 +14,6 @@ body{
     border-bottom: 1px solid black;
 }
 
-<<<<<<< HEAD
 .inputNavbar{
     width: 350px;
     height: 30px;
@@ -25,48 +24,6 @@ body{
     background-color: #F2F2F2;
     opacity: 0.50;
     
-=======
-
-
-.container-fluid{
-    margin-bottom:-20px ;
-}
-
-.navbar-logo{
-    width: 80px;
-    height: 80px;
-    margin-left: 60px;
-    display: flex;
-    flex: row wrap;
-}
-
-.navbar-brand p{
-    font-size: 15px;
-    margin-left: 45px;
-    margin-top: -10px;
-}
-
-.input-navbar{
-    width: 250px;
-    border-radius: 10px;
-    margin-left: -100px;
-    margin-top: -30px;
-    background-color: transparent;
-    border: 1px solid;
-    display: flex;
-    flex: row wrap;
-}
-
-.input-button{
-    background-color: transparent;
-    border: none;
-    width: 50px;
-    height: 30px;
-    margin-top: -30px;
-    margin-left: -320px;
-    display: flex;
-    flex: row wrap;
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 }
 
 ::placeholder{
@@ -191,47 +148,78 @@ li a:hover{
 
 
 
-<<<<<<< HEAD
+/*
+
+.icon-navbar{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+.icon-navbar:hover{
+    transform: scale(1.2);
+    transition: ease 1s;
+}
+
+.nav-item{
+    padding: 3px;
+}
+
+.nav-item:hover{
+    background-color: #952B95;
+}
+
+.navbar-nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.navbar-nav a:hover{
+    color: #fff;
+}
+
+
+
+
+.navbar-nav {
+   background-color: #fff;
+   border-bottom: 1px solid black;
+   margin-left: 1051px;
+   margin-top: -30px;
+   border-left: none;
+   border-bottom: none;
+   width: 200px;
+   height: 220px;
+   position:absolute;
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+}
+
+*/
+
+
 .iconUser{
     width: 400px;
     height: 200px;
     margin-left: 460px;
-=======
-.icon-user{
-    width: 220px;
-    margin-left: 500px;
-    border-radius: 10px;
-    
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 }
 
 .pencil{
     width: 100px;
     height: 30px;
-<<<<<<< HEAD
     margin-right: 420px;
     cursor: pointer;
     position: absolute;
     right: 0;
     cursor: pointer;
     z-index: 1000;
-=======
-    margin-top: -240px;
-    margin-left: 420px;
-    cursor: pointer;
-    right: 0;
-    cursor: pointer;
-    z-index: 1000;
-}
-.pencil img:hover{
-    transform: scale(1.2);
-    transition: ease 1s;
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 }
 
 .pencil:hover{
-    transform: scale(1.2);
-    transition: ease 0.5s;
+    color: red;
 }
 
 .picture h1{

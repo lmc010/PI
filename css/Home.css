@@ -8,13 +8,13 @@ body{
     background-color: #ffffff;
 }
 
-<<<<<<< HEAD
 .banner img{
     width: 450px;
     margin-left: 780px;
     margin-top: -50px;
     
 }
+
 
 
 .boxMenu{
@@ -38,49 +38,6 @@ body{
     background-color: #F2F2F2;
     opacity: 0.50;
     
-=======
-
-.navbar-brand p{
-    font-size: 15px;
-    margin-left: 45px;
-    margin-top: -10px;
-}
-
-
-.navbar-logo{
-    width: 70px;
-    height: 80px;
-    margin-left: 60px;
-    display: flex;
-    flex: row wrap;
-    
-}
-
-.navbar-liberty{
-    size: 10px;
-}
-
-.input-navbar{
-    width: 250px;
-    border-radius: 10px;
-    margin-left: -50px;
-    margin-top: -30px;
-    background-color: transparent;
-    border: 1px solid;
-    display: flex;
-    flex: row wrap;
-}
-
-.input-button{
-    background-color: transparent;
-    border: none;
-    width: 50px;
-    height: 30px;
-    margin-top: -30px;
-    margin-left: -190px;
-    display: flex;
-    flex: row wrap;
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 }
 
 ::placeholder{
@@ -202,6 +159,17 @@ li a:hover{
     margin-left: 100px;
     margin-top: 360px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -546,7 +514,6 @@ li a:hover{
  }
 
 
-<<<<<<< HEAD
  .recomendados h1{
     color: #952B95;
     margin-left: 440px;
@@ -603,8 +570,6 @@ li a:hover{
     text-decoration: underline;
 }
 
-=======
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 
 .image6{
     width: 250px;
@@ -635,7 +600,16 @@ li a:hover{
 }
 
 
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -692,7 +666,12 @@ li a:hover{
 
 
 
-.h1Recomendados{
+
+
+
+
+
+.h1-recomendados{
     color: #952B95;
     margin-left: 450px;
 }
@@ -825,16 +804,22 @@ li a:hover{
     height: 420px;
 }
 
+
+
+
 .cardTwo:hover{
     transform: scale(1.1);
     transition: ease 1s;
     
 }
 
+
+
 .cardTextTwo{
     margin: 30px;
     margin-top: -5px;
 }
+
 
 .cardTextTwo:hover{
     text-decoration: underline;
@@ -881,6 +866,8 @@ li a:hover{
     color: black;
 }
 
+
+
 .cardsSoftSkills{
     display: flex;
     margin-left: 150px;
@@ -890,27 +877,7 @@ li a:hover{
     width: 250px;
     height: 250px;
 }
-=======
-.stars{
-    margin-top: -65px;
-}
 
-
-.stars-two{
-    margin-top: -65px;
-}
-
-
-.stars-three{
-    margin-top: -65px;
-}
-
-
-.stars{
-    margin-top: -65px;
-}
-
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 
 .cardFour{
     border-radius: 15px;
@@ -923,7 +890,6 @@ li a:hover{
 }
 
 
-<<<<<<< HEAD
 .cardFour:hover{
     transform: scale(1.1);
     transition: ease 1s;
@@ -934,8 +900,6 @@ li a:hover{
     margin: 30px;
     margin-top: -5px;
 }
-=======
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 
 .cardTextFour:hover{
     text-decoration: underline;
@@ -952,7 +916,6 @@ li a:hover{
 }
 
 
-<<<<<<< HEAD
 
 .cardFive{
     border-radius: 15px;
@@ -1043,8 +1006,6 @@ li a:hover{
 
 
 
-=======
->>>>>>> 77e319670aae45e3efa6352518ffbfe5e6383dc9
 #liderança h1{
     margin-left: 370px;
     color: #65DAF9;
@@ -1077,7 +1038,7 @@ li a:hover{
  .d-block{
     width: 100%;
     height: 521px;
-    margin-left: 0px;
+    margin-left: -0px;
  }
 
  .arrows a {
@@ -1124,7 +1085,7 @@ li a:hover{
  
   
   #mainSlider .carousel-inner, #mainSlider .carousel-item{
-      height: 71vh;
+      height: 70vh;
   }
   
   #mainSlider .carousel-caption{
@@ -1155,7 +1116,7 @@ li a:hover{
      color: #fff;
      text-transform: uppercase;
      width: 100px;
-     height: 160px;
+     height: 60px;
      padding: 10px 20px;
      border-radius: 30px;
   
@@ -1164,11 +1125,10 @@ li a:hover{
 
 .navbar{
     border-bottom: 1px solid rgb(0, 0, 0);
-    /* background-color: #952B95; */
 }
 
 
-.ofertash1{
+.ofertas-h1{
     color: #952B95;
     margin-left: 550px;
     margin-top: 100px;
@@ -1176,7 +1136,7 @@ li a:hover{
     font-weight: bold;
 }
 
-.divReact{
+.div-react{
     margin-left: 190px;
     border: 3px solid #7878FF;
     padding-left: 60px;
@@ -1186,26 +1146,23 @@ li a:hover{
     padding-bottom: 30px;
 }
 
-.divReact:hover{
+.div-react:hover{
     color: #fff;
     background-color:#d1d1f0;
     cursor: pointer;
 }
 
-.divReact img{
+.div-react img{
     width: 200px;
     height: 200px;
     display: flex;
     flex: row wrap;
 }
-.posiStarsReact{
-    margin: 25px 0px 15px 0px;
-}
 
 
 
 
-.reactImg .numberReact{
+.react-img .number-react{
     width: 20px;
     height: 20px;
     margin-left:218px;
@@ -1214,7 +1171,7 @@ li a:hover{
     flex: row wrap;
  }
 
-.reactImg .starsReact{
+.react-img .stars-react{
    width: 20px;
    height: 20px;
    margin-left:242px;
@@ -1223,7 +1180,7 @@ li a:hover{
    flex: row wrap;
 }
 
-.reactImg .starsReactTwo{
+.react-img .stars-react-two{
     width: 20px;
     height: 20px;
     margin-left:266px;
@@ -1232,7 +1189,7 @@ li a:hover{
     flex: row wrap;
  }
 
-.reactImg .starsReactThree{
+ .react-img .stars-react-three{
     width: 20px;
     height: 20px;
     margin-left:290px;
@@ -1241,7 +1198,7 @@ li a:hover{
     flex: row wrap;
  }
 
-.reactImg .starsReactFour{
+ .react-img .stars-react-four{
     width: 20px;
     height: 20px;
     margin-left:314px;
@@ -1250,7 +1207,7 @@ li a:hover{
     flex: row wrap;
  }
 
-.reactImg .starsReactFive{
+ .react-img .stars-react-five{
     width: 20px;
     height: 20px;
     margin-left:337px;
@@ -1261,7 +1218,7 @@ li a:hover{
 
 
 
-.divReact h1{
+.div-react h1{
     color: #7878FF;
     margin-left: 220px;
     margin-top: -170px;
@@ -1269,14 +1226,14 @@ li a:hover{
     font-weight: bold;
 }
 
-.divReact p{
+.div-react p{
     color: #7878FF;
     margin-left:220px ;
     margin-top: -10px;
     font-size: 15px;
 }
 
-.softSkillsImg img{
+.softskills-img img{
     width: 200px;
     height: 200px;
     display: flex;
@@ -1285,7 +1242,7 @@ li a:hover{
 
 
 
-.softSkillsImg .numberReact{
+.softskills-img .number-react{
     width: 20px;
     height: 20px;
     margin-left:215px;
@@ -1294,7 +1251,7 @@ li a:hover{
     flex: row wrap;
  }
 
-.softSkillsImg .starsReact{
+.softskills-img .stars-react{
    width: 20px;
    height: 20px;
    margin-left:240px;
@@ -1303,7 +1260,7 @@ li a:hover{
    flex: row wrap;
 }
 
-.softSkillsImg .starsReactTwo{
+.softskills-img .stars-react-two{
     width: 20px;
     height: 20px;
     margin-left:265px;
@@ -1312,7 +1269,7 @@ li a:hover{
     flex: row wrap;
  }
 
- .softSkillsImg .starsReactThree{
+ .softskills-img .stars-react-three{
     width: 20px;
     height: 20px;
     margin-left:290px;
@@ -1321,7 +1278,7 @@ li a:hover{
     flex: row wrap;
  }
 
- .softSkillsImg .starsReactFour{
+ .softskills-img .stars-react-four{
     width: 20px;
     height: 20px;
     margin-left:315px;
@@ -1333,7 +1290,7 @@ li a:hover{
 
 
 
-.divReact h2{
+.div-react h2{
     color: #7878FF;
     margin-left: 220px;
     font-size: 25px;
@@ -1343,7 +1300,7 @@ li a:hover{
     
 }
 
-.divReact h3{
+.div-react h3{
     color: #7878FF;
     margin-left: 320px;
     font-size: 15px;
@@ -1353,7 +1310,7 @@ li a:hover{
     flex: row wrap;
 }
 
-.divReact h4{
+.div-react h4{
     color: #7878FF;
     margin-top:15px;
     margin-left: 220px;
@@ -1362,14 +1319,14 @@ li a:hover{
 }
 
 
-.divSoftskills img{
+.div-softskills img{
     width: 180px;
     height: 150px;
 }
 
 
 
-.divSoftskills{
+.div-softskills{
     margin-left: 190px;
     border: 3px solid #7878FF;
     padding-left: 60px;
@@ -1380,12 +1337,12 @@ li a:hover{
 }
 
 
-.divSoftskills:hover{
+.div-softskills:hover{
     background-color: #d1d1f0;
     cursor: pointer;
 }
 
-.divSoftskills h1{
+.div-softskills h1{
     color: #7878FF;
     margin-left: 220px;
     margin-top: -150px;
@@ -1393,14 +1350,14 @@ li a:hover{
     font-weight: bold;
 }
 
-.divSoftskills p{
+.div-softskills p{
     color: #7878FF;
     margin-left:220px ;
     margin-top: -10px;
     font-size: 15px;
 }
 
-.divSoftskills h2{
+.div-softskills h2{
     color: #7878FF;
     margin-left: 220px;
     margin-top: -10px;
@@ -1409,7 +1366,7 @@ li a:hover{
     flex: row wrap;
 }
 
-.divSoftskills h3{
+.div-softskills h3{
     color: #7878FF;
     margin-left: 320px;
     font-size: 15px;
@@ -1419,7 +1376,7 @@ li a:hover{
     flex: row wrap;
 }
 
-.divSoftskills h4{
+.div-softskills h4{
     color: #7878FF;
     margin-top:25px;
     margin-left: 220px;
@@ -1617,53 +1574,4 @@ footer{
     display: flex;
     flex: row wrap;
     
-}
-
-.CursosRecomendados{
-    margin: 30px 10px 30px 10px;
-}
-
-.h1CursosReco{
-    color: #952B95;
-    display: flex;
-    justify-content: center;
-}
-
-.cursosRecoPosi{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cursosReco{
-    display: flex;
-}
-
-.cursos{
-    margin: 10px 40px 10px 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.tamImg{
-    width: 250px;
-}
-
-.h5curso{
-    display: flex;
-    width: 250px;
-    color: #952B95;
-}
-.h1preco{
-    margin: 2px;
-    color: #952B95;
-}
-
-.estrela{
-    width: 30px;
-    margin: 1px 3px 1px 3px;
-}
-
-.posiEstrelas{
-    display: flex;
 }
