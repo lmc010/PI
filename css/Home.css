@@ -1059,9 +1059,7 @@ li a:hover{
     background-color: rgb(255, 255, 255)
   }
 
-  
 
-  
   .carousel-item h2{
     font-size: 15px;
     margin-left: -509px;
@@ -1085,7 +1083,7 @@ li a:hover{
  
   
   #mainSlider .carousel-inner, #mainSlider .carousel-item{
-      height: 70vh;
+      height: 71vh;
   }
   
   #mainSlider .carousel-caption{
