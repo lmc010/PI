@@ -202,8 +202,11 @@ li a:hover{
     color: #ffffff;
 }
 
-.button-start a:hover{
-    color: red;
+.buttonStart a:hover{
+    color: rgb(70, 98, 240);
+    letter-spacing: 1px;
+    transform: scale(1.1);
+    transition: ease 1s;
 }
 
 .buttonBuy{
@@ -220,7 +223,10 @@ li a:hover{
 }
 
 .buttonBuy a:hover{
-    color: red;
+    color: #952B95;
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    transition: ease 1s;
 }
 
 .feedback{

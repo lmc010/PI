@@ -141,7 +141,7 @@ label h1{
 li a:hover{
     background-color: #952B95;
     color: white;
-    width: 217px;
+    width: 239px;
 }
 #check:checked ~ .sidebarMenu{
     left: 0;
