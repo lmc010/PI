@@ -720,6 +720,7 @@ li a:hover{
     margin: 15px;
     width: 300px;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -739,9 +740,6 @@ li a:hover{
 }
 
 
-.cardTextOne:hover{
-    text-decoration: underline;
-}
 
 .cardTextOne h1{
     font-size: 20px;
@@ -774,6 +772,7 @@ li a:hover{
     color: #7878FF;
     cursor: pointer;
 }
+
 
 .cardTextThree p {
     color: #952B95;
@@ -831,6 +830,7 @@ li a:hover{
     margin: 15px;
     width: 300px;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -850,13 +850,13 @@ li a:hover{
 }
 
 
-.cardTextTwo:hover{
-    text-decoration: underline;
-}
-
 .cardTextTwo h1{
     font-size: 20px;
     cursor: pointer;
+}
+
+.href{
+    text-decoration: none;
 }
 
 .cardThree{
@@ -867,6 +867,7 @@ li a:hover{
     width: 300px;
     border: 2px solid #952B95;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -881,9 +882,7 @@ li a:hover{
     margin-top: -5px;
 }
 
-.cardTextThree:hover{
-    text-decoration: underline;
-}
+
 
 .cardTextThree h1{
     font-size: 20px;
@@ -916,6 +915,7 @@ li a:hover{
     width: 300px;
     border: 2px solid #952B95;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -930,9 +930,7 @@ li a:hover{
     margin-top: -5px;
 }
 
-.cardTextFour:hover{
-    text-decoration: underline;
-}
+
 
 .cardTextFour h1{
     font-size: 20px;
@@ -954,6 +952,7 @@ li a:hover{
     width: 300px;
     border: 2px solid #952B95;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -968,9 +967,7 @@ li a:hover{
     margin-top: -5px;
 }
 
-.cardTextFive:hover{
-    text-decoration: underline;
-}
+
 
 .cardTextFive h1{
     font-size: 20px;
@@ -990,6 +987,7 @@ li a:hover{
     width: 300px;
     border: 2px solid #952B95;
     height: 420px;
+    cursor: pointer;
 }
 
 
@@ -1004,9 +1002,6 @@ li a:hover{
     margin-top: -5px;
 }
 
-.cardTextSix:hover{
-    text-decoration: underline;
-}
 
 .cardTextSix h1{
     font-size: 20px;
