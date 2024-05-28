@@ -106,22 +106,25 @@ li a {
   padding-top: 30px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-/* .boxVideo {
-  margin-top: 210px;
-  z-index: 1;
-} */
-/* 
+
+.boxVideo{
+  display: flex;
+}
+
+.posiVideoAside{
+  display: flex;
+}
+
 .sidebarMenuvideo {
   background-image: linear-gradient(rgb(214, 77, 238), #845bf4);
-  margin-top: -148px;
-  margin-left: 379px;
+  
   width: 320px;
-  left: 148px;
   height: 343px;
   border-radius: 10px;
   z-index: 1;
-  position: absolute;
   transition: all 0.3s linear;
 }
 
@@ -149,8 +152,7 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
 .playlistVideo label img {
   width: 100px;
   height: 100px;
-  margin-top: 170px;
-  margin-left: 770px;
+  
 }
 
 .menu-video .playlist {
@@ -166,4 +168,7 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
 }
 .menu-video .navbar-nav .nav-item {
   height: 80px;
-} */
+} 
+
+/* descAula marcação */
+

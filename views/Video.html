@@ -50,63 +50,44 @@
     </nav>
 
     <section class="sectionVideo">
+      <div>
       <video width="620" height="440" controls>
         <source src="static/imgs/videoArduino.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
       </video>
-
-      <!-- <div class="boxVideo">     
-        <input type="checkbox" id="menuVideo">
-        <div class="playlistVideo">       
+    
+      <div class="boxVideo">
+        <input type="checkbox" id="menuVideo" class="menuVideoCheckbox" />
+        <div class="playlistVideo">
           <label for="menuVideo">
-            <img src="static/imgs/Icon_playlist.svg">
-          </label> 
+            <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
+          </label>
         </div>
-
-        <nav class="sidebarMenuvideo">     
-            <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a href="#">Apresentação do Curso</a>
-            </li>
-            <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Conheçendo o Arduino</a>
-            </li>
-            <li class="nav-item">
-                <img src="imgs/Image 19.svg"> 
-                <a  href="#">Botões e Chaves </a>
-            </li>
-            <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Display de 7 Segmentos</a>
-            </li>
-            <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Display LCD </a>
-            </li>    
-            <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Conclusão do Curso</a>
-            </li>           
-             </ul>
-             
-          </nav>
-    </div>  -->
-    </section>
-
-    <script>
-      function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.classList.contains("open-menu")) {
-          menu.classList.remove("open-menu");
-        } else {
-          menu.classList.add("open-menu");
-        }
-      }
-    </script>
-    <!-- 
     
-    
-    <div class="descricao">
+        <nav class="sidebarMenuvideo">
+          <ul>
+            <li class="nav-item">
+              <a href="#">Apresentação do Curso</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Conheçendo o Arduino</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Botões e Chaves</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Display de 7 Segmentos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Display LCD</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Conclusão do Curso</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="descricao">
         <h1 class="titulo"> Aula 1 -  Introdução ao Html e CSS</h1>
         
           <button class="buttonLike"><img src="static/imgs/Icon_Like.svg"></button>
@@ -125,6 +106,22 @@
 
              </details>
         </div>
+    </section>
+    
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("open-menu")) {
+          menu.classList.remove("open-menu");
+        } else {
+          menu.classList.add("open-menu");
+        }
+      }
+    </script>
+     
+    
+    
+    
     </div>
     <div class="comments">
         <h1>Comentarios</h1>
@@ -190,6 +187,6 @@
                <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
             </div>
         </div>
-    </footer> -->
+    </footer> 
   </body>
 </html>
