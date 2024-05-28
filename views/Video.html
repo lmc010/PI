@@ -51,11 +51,11 @@
 
     <section class="sectionVideo">
       <div>
-      <video width="620" height="440" controls>
-        <source src="static/imgs/videoArduino.mp4" type="video/mp4" />
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-    
+        <video width="620" height="440" controls>
+          <source src="static/imgs/videoArduino.mp4" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
       <div class="boxVideo">
         <input type="checkbox" id="menuVideo" class="menuVideoCheckbox" />
         <div class="playlistVideo">
@@ -63,14 +63,13 @@
             <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
           </label>
         </div>
-    
         <nav class="sidebarMenuvideo">
           <ul>
             <li class="nav-item">
               <a href="#">Apresentação do Curso</a>
             </li>
             <li class="nav-item">
-              <a href="#">Conheçendo o Arduino</a>
+              <a href="#">Conhecendo o Arduino</a>
             </li>
             <li class="nav-item">
               <a href="#">Botões e Chaves</a>
@@ -87,27 +86,33 @@
           </ul>
         </nav>
       </div>
-      <div class="descricao">
-        <h1 class="titulo"> Aula 1 -  Introdução ao Html e CSS</h1>
-        
-          <button class="buttonLike"><img src="static/imgs/Icon_Like.svg"></button>
-          <button class="buttonDisike"><img src="static/imgs/Icon_Dislike.svg"></button>
-          <details>
-            <summary>Descrição da Aula</summary>
-        <div>
-            <h3> 2562 Visualizações.  12/05/2024</h3>
-            <p>Bem-vindos à nossa aula introdutória sobre Arduino!
-                Nesta aula, vamos explorar<br> os conceitos básicos do Arduino, 
-                aprender sobre sua história e entender como ele<br> funciona.</p>
-            <p>Email para Contato - <h2 class="gmail">tiagohenrique717@gmail.com</h2></p>
-            <p>Siga-me no Instagram - <h2 class="instagram">@proftiagohenrique</h2></p>
-            <div>       
-            </div>
-
-             </details>
-        </div>
     </section>
-    
+
+    <div class="descricao">
+      <h1 class="titulo">Aula 1 - Introdução ao Html e CSS</h1>
+
+      <div class="buttons">
+        <button><img src="static/imgs/Icon_Like.svg" alt="Like" /></button>
+        <button>
+          <img src="static/imgs/Icon_Dislike.svg" alt="Dislike" />
+        </button>
+      </div>
+
+      <details>
+        <summary>Descrição da Aula</summary>
+        <div>
+          <h3>2562 Visualizações. 12/05/2024</h3>
+          <p>
+            Bem-vindos à nossa aula introdutória sobre Arduino! Nesta aula,
+            vamos explorar os conceitos básicos do Arduino, aprender sobre sua
+            história e entender como ele funciona.
+          </p>
+          <p>Email para Contato - tiagohenrique717@gmail.com</p>
+          <p>Siga-me no Instagram - @proftiagohenrique</p>
+        </div>
+      </details>
+    </div>
+
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");
@@ -118,11 +123,10 @@
         }
       }
     </script>
-     
-    
-    
-    
-    </div>
+  </body>
+</html>
+
+<!--    
     <div class="comments">
         <h1>Comentarios</h1>
         <button class="buttonComments"><p>+ Adicionar Comentario</p></button>
@@ -187,6 +191,4 @@
                <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
             </div>
         </div>
-    </footer> 
-  </body>
-</html>
+    </footer> -->
