@@ -12,7 +12,6 @@
       <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
       <div class="search-container">
         <input type="text" placeholder="Pesquisar..." />
-        <i class="fas fa-search"></i>
       </div>
       <div class="icons">
         <img src="static/imgs/Image 17.svg" class="photo" />
@@ -45,7 +44,7 @@
         </li>
       </ul>
       <span class="menu-btn" onclick="toggleMenu()">
-        <img src="static/imgs/Icon_Exit.svg" width="50px" />
+        <img src="static/imgs/Icon_Exit.svg" width="50%" />
       </span>
     </nav>
 
@@ -57,12 +56,10 @@
         </video>
       </div>
       <div class="boxVideo">
-        <input type="checkbox" id="menuVideo" class="menuVideoCheckbox" />
-        <div class="playlistVideo">
-          <label for="menuVideo">
-            <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
-          </label>
-        </div>
+        <button id="toggleMenuButton">
+          <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
+        </button>
+
         <nav class="sidebarMenuvideo">
           <ul>
             <li class="nav-item">
@@ -92,7 +89,9 @@
       <h1 class="titulo">Aula 1 - Introdução ao Html e CSS</h1>
 
       <div class="buttons">
-        <button><img src="static/imgs/Icon_Like.svg" alt="Like" /></button>
+        <button>
+          <img src="static/imgs/Icon_Like.svg" alt="Like" />
+        </button>
         <button>
           <img src="static/imgs/Icon_Dislike.svg" alt="Dislike" />
         </button>
@@ -113,6 +112,52 @@
       </details>
     </div>
 
+    <div class="comments">
+      <h1>Comentarios</h1>
+      <button class="buttonComments">+ Adicionar Comentario</button>
+      <div class="allComments">
+        <div class="commentsOne">
+          <img src="static/imgs/Image 18.svg" />
+          <h2>Vanessa</h2>
+          <h3>Parabéns, professor! Obrigado pelo curso.</h3>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <footer>
+      <div class="posiDivHeader">
+        <div class="divFooterOne">
+          <h1 class="footerh1">Tá com duvida?</h1>
+          <p class="footerp" href="#">Quem somos</p>
+          <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter" />
+        </div>
+        <div class="divFooterTwo">
+          <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
+          <p class="footerTwop" href="#">Contato</p>
+          <p class="footerTwop" href="#">Trabalhe conosco</p>
+          <p class="footerTwop" href="#">Termos</p>
+          <p class="footerTwop" href="#">Politica de privacidade</p>
+          <p class="footerTwop" href="#">Configurações de cookie</p>
+        </div>
+        <div class="divFooterThree">
+          <div>
+            <h1 class="footerThreeh1">Fale com a gente</h1>
+            <div class="posiMidias">
+              <img src="static/imgs/Icon_message.svg" class="iconMessage" />
+              <img src="static/imgs/Icon_whatsapp.svg" class="iconWhatsapp" />
+            </div>
+          </div>
+          <h2 class="footerThreeh2">Nossas Redes</h2>
+          <div class="posiMidias">
+            <img src="static/imgs/Icon_instagram.svg" class="iconInstagram" />
+            <img src="static/imgs/Icon_youtube.svg" class="iconYoutube" />
+          </div>
+          <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
+        </div>
+      </div>
+    </footer>
+
     <script>
       function toggleMenu() {
         var menu = document.getElementById("menu");
@@ -122,73 +167,13 @@
           menu.classList.add("open-menu");
         }
       }
+
+      document
+        .getElementById("toggleMenuButton")
+        .addEventListener("click", function () {
+          var sidebar = document.querySelector(".sidebarMenuvideo");
+          sidebar.classList.toggle("show");
+        });
     </script>
   </body>
 </html>
-
-<!--    
-    <div class="comments">
-        <h1>Comentarios</h1>
-        <button class="buttonComments"><p>+ Adicionar Comentario</p></button>
-        <div class="allComments">
-         <div class="commentsOne">
-          <img src="static/imgs/Image 18.svg"> 
-           <h2>Vanessa</h2>
-           <h3> Parabéns, professor! Obrigado pelo curso. </p>
-         </div>
-         <br>
-         
-         <div class="commentsTwo">
-            <img src="static/imgs/Image 20.svg"> 
-             <h2>Leticia</h2>
-             <h3> Top! Já estou aqui aprendendo !</p>
-          </div>
-          <br>
-        
-          <div class="commentsThree">
-            <img src="static/imgs/Image 21.svg"> 
-             <h2>Denise</h2>
-             <h3> A edição está de parabéns... </p>
-          </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <footer>
-        <div class="divFooterOne">
-             <h1 class="footerh1">Tá com duvida?</h1>
-             <p class="footerp" href="#">Quem somos</p>
-             <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter">
-        </div>
-        <div class="divFooterTwo">
-            <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
-            <p class="footerTwop" href="#">Contato</p>
-            <p class="footerTwop2" href="#">Trabalhe conosco</p>
-            <p class="footerTwop3" href="#">Termos</p>
-            <p class="footerTwop4" href="#">Politica de privacidade</p>
-            <p class="footerTwop5" href="#">Configurações de cookie</p>
-        </div>
-        <div class="divFooterThree">
-            <div>
-                <div>
-               <h1 class="footerThreeh1">Fale com a gente</h1>
-                </div>
-               <img src="static/imgs/Icon_message.svg" class="iconMessage">
-               <img src="static/imgs/Icon_whatsapp.svg"   class="iconWhatsapp">
-            </div>
-            <div>
-               <h2 class="footerThreeh2">Nossas Redes</h2>
-               <img src="static/imgs/Icon_instagram.svg"class="iconInstagram">
-               <img src="static/imgs/Icon_youtube.svg"class="iconYoutube">
-               <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
-            </div>
-        </div>
-    </footer> -->
