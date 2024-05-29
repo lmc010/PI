@@ -1,202 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/Video.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/Video.css" />
     <title>Video</title>
-</head>
-<body>
-    <nav class="navbar">
-        <div>
-            <input type="text" name="name" placeholder="Digite Aqui..." class="inputNavbar">
-                <img src="static/imgs/Icon_magnifying glass.svg" class="magnifyingGlass">
-            </input>
-        
-        <img src="static/imgs/Image 17.svg" class="photo">
-        
-
-    <div class="boxMenu">
-        <input type="checkbox" id="check">
-      <div class="menuIcon">       
-        <label for="check">
-          <img src="static/imgs/Icon_menu.svg">
-        </label> 
+  </head>
+  <body>
+    <div class="navbar">
+      <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
+      <div class="search-container">
+        <input type="text" placeholder="Pesquisar..." />
       </div>
-
-
-       <nav class="sidebarMenu">     
-          <img class="logo" src="static/imgs/Logo_liberty 1.svg">
-         <ul>
-            <li>
-                <a href="Home.html">Home</a>
-            </li>
-            <li>
-                <a href="Perfil.html">Meu Perfil</a>
-            </li>
-            <li>
-                <a href="#">Meus Cursos</a>
-            </li>
-            <li>
-                <a href="#">Meus Certificados</a>
-            </li>
-            <li>
-                <a href="#">Suporte</a>
-            </li>
-            <li>
-                <a href="#">Configurações</a>
-            </li>
-            <li>
-                <a  href="Login.html">Fazer Logout</a>
-            </li>
-            
-            <div class="close">
-                <label for="check">
-              <img src="static/imgs/Icon_Exit.svg">
-              </label>
-             </div>
-            
-           </ul>
-           
-        </nav>
-
-        
+      <div class="icons">
+        <img src="static/imgs/Image 17.svg" class="photo" />
       </div>
+    </div>
+
+    <nav class="menu" id="menu">
+      <img class="logoMenu" src="static/imgs/Logo_liberty 1.svg" />
+      <ul>
+        <li>
+          <a href="Home.html">Home</a>
+        </li>
+        <li>
+          <a href="Perfil.html">Meu Perfil</a>
+        </li>
+        <li>
+          <a href="#">Meus Cursos</a>
+        </li>
+        <li>
+          <a href="#">Meus Certificados</a>
+        </li>
+        <li>
+          <a href="#">Suporte</a>
+        </li>
+        <li>
+          <a href="#">Configurações</a>
+        </li>
+        <li>
+          <a href="Login.html">Fazer Logout</a>
+        </li>
+      </ul>
+      <span class="menu-btn" onclick="toggleMenu()">
+        <img src="static/imgs/Icon_Exit.svg" width="50%" />
+      </span>
     </nav>
 
-    
-        <video  width="320" height="240" controls >
-            <source src="/home/firework/Code/PI/imgs/videoArduino.mp4" type="video/mp4" >
+    <section class="sectionVideo">
+      <div>
+        <video width="620" height="440" controls>
+          <source src="static/imgs/videoArduino.mp4" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
         </video>
-    
-    
-    <div class="boxVideo">     
-        <input type="checkbox" id="menuVideo">
-        <div class="playlistVideo">       
-          <label for="menuVideo">
-            <img src="static/imgs/Icon_playlist.svg">
-          </label> 
-        </div>
+      </div>
+      <div class="boxVideo">
+        <button id="toggleMenuButton">
+          <img src="static/imgs/Icon_playlist.svg" alt="Playlist Icon" />
+        </button>
 
-        <nav class="sidebarMenuvideo">     
+        <nav class="sidebarMenuvideo">
+          <ul>
             <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a href="#">Apresentação do Curso</a>
+              <a href="#">Apresentação do Curso</a>
             </li>
             <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Conheçendo o Arduino</a>
+              <a href="#">Conhecendo o Arduino</a>
             </li>
             <li class="nav-item">
-                <img src="imgs/Image 19.svg"> 
-                <a  href="#">Botões e Chaves </a>
+              <a href="#">Botões e Chaves</a>
             </li>
             <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Display de 7 Segmentos</a>
+              <a href="#">Display de 7 Segmentos</a>
             </li>
             <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Display LCD </a>
-            </li>    
+              <a href="#">Display LCD</a>
+            </li>
             <li class="nav-item">
-                <img src="static/imgs/Image 19.svg"> 
-                <a  href="#">Conclusão do Curso</a>
-            </li>           
-             </ul>
-             
-          </nav>
-    </div> 
+              <a href="#">Conclusão do Curso</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
     <div class="descricao">
-        <h1 class="titulo"> Aula 1 -  Introdução ao Html e CSS</h1>
-        
-          <button class="buttonLike"><img src="static/imgs/Icon_Like.svg"></button>
-          <button class="buttonDisike"><img src="static/imgs/Icon_Dislike.svg"></button>
-          <details>
-            <summary>Descrição da Aula</summary>
-        <div>
-            <h3> 2562 Visualizações.  12/05/2024</h3>
-            <p>Bem-vindos à nossa aula introdutória sobre Arduino!
-                Nesta aula, vamos explorar<br> os conceitos básicos do Arduino, 
-                aprender sobre sua história e entender como ele<br> funciona.</p>
-            <p>Email para Contato - <h2 class="gmail">tiagohenrique717@gmail.com</h2></p>
-            <p>Siga-me no Instagram - <h2 class="instagram">@proftiagohenrique</h2></p>
-            <div>       
-            </div>
+      <h1 class="titulo">Aula 1 - Introdução ao Html e CSS</h1>
 
-             </details>
+      <div class="buttons">
+        <button>
+          <img src="static/imgs/Icon_Like.svg" alt="Like" />
+        </button>
+        <button>
+          <img src="static/imgs/Icon_Dislike.svg" alt="Dislike" />
+        </button>
+      </div>
+
+      <details>
+        <summary>Descrição da Aula</summary>
+        <div>
+          <h3>2562 Visualizações. 12/05/2024</h3>
+          <p>
+            Bem-vindos à nossa aula introdutória sobre Arduino! Nesta aula,
+            vamos explorar os conceitos básicos do Arduino, aprender sobre sua
+            história e entender como ele funciona.
+          </p>
+          <p>Email para Contato - tiagohenrique717@gmail.com</p>
+          <p>Siga-me no Instagram - @proftiagohenrique</p>
         </div>
+      </details>
     </div>
+
     <div class="comments">
-        <h1>Comentarios</h1>
-        <button class="buttonComments"><p>+ Adicionar Comentario</p></button>
-        <div class="allComments">
-         <div class="commentsOne">
-          <img src="static/imgs/Image 18.svg"> 
-           <h2>Vanessa</h2>
-           <h3> Parabéns, professor! Obrigado pelo curso. </p>
-         </div>
-         <br>
-         
-         <div class="commentsTwo">
-            <img src="static/imgs/Image 20.svg"> 
-             <h2>Leticia</h2>
-             <h3> Top! Já estou aqui aprendendo !</p>
-          </div>
-          <br>
-        
-          <div class="commentsThree">
-            <img src="static/imgs/Image 21.svg"> 
-             <h2>Denise</h2>
-             <h3> A edição está de parabéns... </p>
-          </div>
+      <h1>Comentarios</h1>
+      <button class="buttonComments">+ Adicionar Comentario</button>
+      <div class="allComments">
+        <div class="commentsOne">
+          <img src="static/imgs/Image 18.svg" />
+          <h2>Vanessa</h2>
+          <h3>Parabéns, professor! Obrigado pelo curso.</h3>
         </div>
+        <br />
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <footer>
+      <div class="posiDivHeader">
         <div class="divFooterOne">
-             <h1 class="footerh1">Tá com duvida?</h1>
-             <p class="footerp" href="#">Quem somos</p>
-             <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter">
+          <h1 class="footerh1">Tá com duvida?</h1>
+          <p class="footerp" href="#">Quem somos</p>
+          <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter" />
         </div>
         <div class="divFooterTwo">
-            <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
-            <p class="footerTwop" href="#">Contato</p>
-            <p class="footerTwop2" href="#">Trabalhe conosco</p>
-            <p class="footerTwop3" href="#">Termos</p>
-            <p class="footerTwop4" href="#">Politica de privacidade</p>
-            <p class="footerTwop5" href="#">Configurações de cookie</p>
+          <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
+          <p class="footerTwop" href="#">Contato</p>
+          <p class="footerTwop" href="#">Trabalhe conosco</p>
+          <p class="footerTwop" href="#">Termos</p>
+          <p class="footerTwop" href="#">Politica de privacidade</p>
+          <p class="footerTwop" href="#">Configurações de cookie</p>
         </div>
         <div class="divFooterThree">
-            <div>
-                <div>
-               <h1 class="footerThreeh1">Fale com a gente</h1>
-                </div>
-               <img src="static/imgs/Icon_message.svg" class="iconMessage">
-               <img src="static/imgs/Icon_whatsapp.svg"   class="iconWhatsapp">
+          <div>
+            <h1 class="footerThreeh1">Fale com a gente</h1>
+            <div class="posiMidias">
+              <img src="static/imgs/Icon_message.svg" class="iconMessage" />
+              <img src="static/imgs/Icon_whatsapp.svg" class="iconWhatsapp" />
             </div>
-            <div>
-               <h2 class="footerThreeh2">Nossas Redes</h2>
-               <img src="static/imgs/Icon_instagram.svg"class="iconInstagram">
-               <img src="static/imgs/Icon_youtube.svg"class="iconYoutube">
-               <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
-            </div>
+          </div>
+          <h2 class="footerThreeh2">Nossas Redes</h2>
+          <div class="posiMidias">
+            <img src="static/imgs/Icon_instagram.svg" class="iconInstagram" />
+            <img src="static/imgs/Icon_youtube.svg" class="iconYoutube" />
+          </div>
+          <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
         </div>
+      </div>
     </footer>
-</body>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("open-menu")) {
+          menu.classList.remove("open-menu");
+        } else {
+          menu.classList.add("open-menu");
+        }
+      }
+
+      document
+        .getElementById("toggleMenuButton")
+        .addEventListener("click", function () {
+          var sidebar = document.querySelector(".sidebarMenuvideo");
+          sidebar.classList.toggle("show");
+        });
+    </script>
+  </body>
 </html>

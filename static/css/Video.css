@@ -1,201 +1,146 @@
 body {
   background-image: #f2f2f2;
   font-family: "Roboto", sans-serif;
-}
+  margin: 0;
+  padding: 0;
 
-.boxMenu {
-  position: fixed;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
+  display: flex;
+  width: 100%;
   background-color: #d926d9;
-  height: 100px;
-  border-bottom: 1px solid black;
-  position: absolute;
-  z-index: 2;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-.inputNavbar {
-  width: 350px;
-  height: 30px;
-  border-radius: 10px;
-  margin-left: 300px;
-  margin-top: 25px;
-  border: 2px solid #ffffff;
+.navbar input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  border-radius: 30px;
+}
+.navbar .search-container input {
+  border: 5px solid #ffffff;
+  width: 100%;
+  border-radius: 30px;
   background-color: #f2f2f2;
   opacity: 0.5;
+  font-size: 16px;
+  outline: none;
 }
 
-::placeholder {
-  color: #848484;
-  font-weight: bold;
-}
-
-.magnifyingGlass {
-  width: 20px;
-  height: 20px;
-  margin-left: 620px;
-  margin-top: -25px;
+.icons {
   display: flex;
-  flex: row wrap;
+  align-items: center;
 }
-
-input p {
-  color: #7878ff;
+.icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
-
-.photo {
-  width: 70px;
-  height: 70px;
-  margin-left: 1080px;
-  margin-top: -50px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.sidebarMenu {
-  background-image: linear-gradient(rgb(214, 77, 238), #845bf4);
-  margin-top: -25px;
-  width: 250px;
-  left: -250px;
-  height: 620px;
-  position: absolute;
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  z-index: 5;
-}
-
-label {
-  padding: 15px;
-  position: absolute;
-  cursor: pointer;
-}
-
-label img {
-  width: 50px;
-  height: 50px;
-}
-
-input[type="checkbox"] {
+.menu {
   display: none;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(214, 77, 238), #845bf4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  padding: 20px;
+}
+.logoMenu {
+  width: 50%;
 }
 
-.menuIcon {
-  margin-top: -75px;
-  margin-left: 30px;
-}
-
-.menuIcon label {
-  background-color: #d926d9;
-  border-radius: 5px;
-}
-
-.sidebarMenu .logo {
-  width: 80px;
-  height: 80px;
-  margin-top: 45px;
-}
-
-.sidebarMenu img {
-  margin-top: -500px;
-  width: 60px;
-  margin-left: 40px;
+ul {
+  text-decoration: none;
+  width: 50%;
 }
 
 li {
   text-decoration: none;
   list-style-type: none;
-}
-
-ul {
-  top: 120px;
-  position: absolute;
-  text-decoration: none;
+  margin-bottom: 30px;
 }
 
 li a {
-  font-size: 16px;
-  display: block;
-  padding: 10px;
-  width: 215px;
+  font-size: 100%;
   text-decoration: none;
   color: #fff;
 }
 
-label h1 {
-  color: #000000;
-  position: relative;
-}
-
-li a:hover {
-  background-color: #952b95;
-  color: white;
-  width: 239px;
-}
-#check:checked ~ .sidebarMenu {
-  left: 0;
-}
-
-.close {
-  margin-left: 100px;
-  margin-top: 360px;
-}
-
-.thumbnail {
-  width: 620px;
-  height: 347px;
-  margin-top: 60px;
-  margin-left: 250px;
-  z-index: 2;
-  position: absolute;
-  border-radius: 25px;
-}
-
-.iconPlay {
-  width: 200px;
-  margin-top: 120px;
-  margin-left: 455px;
+.menu-btn {
+  font-size: 40px;
+  color: #f2f2f2;
   cursor: pointer;
-  position: absolute;
-  z-index: 2;
+}
+.open-menu {
+  display: flex;
+  align-items: center;
 }
 
-.iconPlay:hover {
-  transform: scale(1.3);
-  transition: ease 1s;
-}
-
-.video h1 {
-  font-size: 118px;
-  margin-left: 140px;
-  margin-top: 570px;
-  color: #952b95;
+/* video */
+.sectionVideo {
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .boxVideo {
-  margin-top: 210px;
-  z-index: 1;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.posiVideoAside {
+  display: flex;
 }
 
 .sidebarMenuvideo {
   background-image: linear-gradient(rgb(214, 77, 238), #845bf4);
-  margin-top: -148px;
-  margin-left: 379px;
+
   width: 320px;
-  left: 148px;
   height: 343px;
   border-radius: 10px;
   z-index: 1;
-  position: absolute;
   transition: all 0.3s linear;
 }
-
-input[type="checkbox"]:checked ~ .sidebarMenuvideo {
-  transform: translateX(470px);
+.sidebarMenuvideo {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Ajuste conforme necessário */
+  height: 100%; /* Ajuste conforme necessário */
+  background-color: #fff; /* Ajuste conforme necessário */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
 }
 
-#menuVideo:checked ~ .sidebarMenuvideo {
-  left: 0;
+/* Estilo do botão */
+.playlistVideo button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar visível */
+.sidebarMenuvideo.show {
+  transform: translateX(0);
 }
 
 .sidebarMenuvideo .nav-item img {
@@ -214,8 +159,6 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
 .playlistVideo label img {
   width: 100px;
   height: 100px;
-  margin-top: 170px;
-  margin-left: 770px;
 }
 
 .menu-video .playlist {
@@ -233,18 +176,7 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
   height: 80px;
 }
 
-.titulo {
-  margin-top: 420px;
-  margin-left: 280px;
-  font-size: 30px;
-  color: #952b95;
-}
-
-.descricao div {
-  background-color: #e4e4eb;
-  margin-top: 10px;
-  width: 600px;
-}
+/* video para baixo */
 
 .descricao img {
   width: 30px;
@@ -267,62 +199,34 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
 }
 
 .descricao details {
-  margin-left: 275px;
-  margin-top: -45px;
   font-size: 30px;
   color: #952b95;
 }
 
 .descricao p {
-  margin-left: 10px;
-  margin-top: 10px;
   font-size: 16px;
   color: #952b95;
 }
 
-.gmail {
-  background-color: #c5c5c3;
-  border-radius: 15px;
-  margin-top: -35px;
-  margin-left: 160px;
-  z-index: 1px;
-  font-size: 15px;
-  width: 207px;
-  cursor: pointer;
-}
-
-.instagram {
-  background-color: #c5c5c3;
-  border-radius: 15px;
-  margin-top: -35px;
-  margin-left: 180px;
-  z-index: 1px;
-  font-size: 15px;
-  width: 147px;
-  cursor: pointer;
-}
-
 .descricao h3 {
-  margin-left: 10px;
-  margin-top: 10px;
   font-size: 16px;
   color: #952b95;
   word-spacing: 5px;
 }
 
+/* comentarios */
+
 .comments {
   width: 1010px;
   height: 400px;
-  margin-top: 100px;
-  margin-left: 130px;
+
   color: #952b95;
 }
 
 .buttonComments {
   border-color: #952b95;
   border-radius: 10px;
-  margin-left: 800px;
-  margin-top: -90px;
+
   z-index: 2;
   width: 200px;
   height: 33px;
@@ -443,9 +347,18 @@ input[type="checkbox"]:checked ~ .sidebarMenuvideo {
   font-size: 15px;
 }
 
+/* footer */
+
 footer {
   border-top: 1px solid rgb(0, 0, 0);
   background-color: #7878ff;
+  width: 100%;
+}
+
+.posiDivHeader {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
 }
 
 .logo {
@@ -454,33 +367,33 @@ footer {
 }
 
 .divFooterOne {
-  padding-top: 20px;
   display: flex;
-  flex: row wrap;
+  flex-direction: column;
 }
 
 .divFooterTwo {
   display: flex;
-  flex: row wrap;
-  margin-left: 10px;
+  flex-direction: column;
 }
 
 .divFooterThree {
-  margin-left: 45px;
   display: flex;
-  flex: row wrap;
+  flex-direction: column;
+}
+
+.posiMidias {
+  display: flex;
+  justify-content: space-around;
 }
 
 .footerh1 {
   color: #ffffff;
   font-size: 15px;
-  margin-left: 180px;
 }
 
 .footerp {
   color: #ffffff;
-  margin-top: 25px;
-  margin-left: -102px;
+
   cursor: pointer;
 }
 
@@ -491,21 +404,16 @@ footer {
 .logoFooter {
   width: 120px;
   height: 120px;
-  margin-top: 50px;
-  margin-left: -108px;
 }
 
 .footerTwoh1 {
   color: #ffffff;
   font-size: 15px;
-  margin-left: 500px;
-  margin-top: -170px;
 }
 
 .footerTwop {
   color: rgb(255, 255, 255);
-  margin-top: -150px;
-  margin-left: -117px;
+  margin: 8px;
   cursor: pointer;
 }
 
@@ -513,56 +421,11 @@ footer {
   text-decoration: underline;
 }
 
-.footerTwop2 {
-  color: rgb(255, 255, 255);
-  margin-top: -120px;
-  margin-left: -57px;
-  cursor: pointer;
-}
-
-.footerTwop2:hover {
-  text-decoration: underline;
-}
-
-.footerTwop3 {
-  color: rgb(255, 255, 255);
-  margin-top: -90px;
-  margin-left: -124px;
-  cursor: pointer;
-}
-
-.footerTwop3:hover {
-  text-decoration: underline;
-}
-
-.footerTwop4 {
-  color: rgb(255, 255, 255);
-  margin-top: -60px;
-  margin-left: -50px;
-  cursor: pointer;
-}
-
-.footerTwop4:hover {
-  text-decoration: underline;
-}
-
-.footerTwop5 {
-  color: rgb(255, 255, 255);
-  margin-top: -30px;
-  margin-left: -158px;
-  cursor: pointer;
-}
-
-.footerTwop5:hover {
-  text-decoration: underline;
-}
-
 .footerThreeh1 {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  margin-left: 810px;
-  margin-top: -180px;
+
   display: flex;
   flex: row wrap;
 }
@@ -570,7 +433,6 @@ footer {
 .iconMessage {
   width: 50px;
   height: 50px;
-  margin-left: 810px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -579,8 +441,7 @@ footer {
 .iconWhatsapp {
   width: 50px;
   height: 50px;
-  margin-left: 875px;
-  margin-top: -50px;
+
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -589,8 +450,6 @@ footer {
 .footerThreeh2 {
   color: #ffffff;
   font-size: 15px;
-  margin-top: -70px;
-  margin-left: -105px;
   font-weight: bold;
   display: flex;
   flex: row wrap;
@@ -599,7 +458,6 @@ footer {
 .iconInstagram {
   width: 50px;
   height: 50px;
-  margin-left: -115px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -608,8 +466,6 @@ footer {
 .iconYoutube {
   width: 50px;
   height: 50px;
-  margin-left: -50px;
-  margin-top: -50px;
   cursor: pointer;
   display: flex;
   flex: row wrap;
@@ -618,7 +474,6 @@ footer {
 .footer3p {
   color: #ffffff;
   font-size: 15px;
-  margin-left: 80px;
   font-weight: bold;
   display: flex;
   flex: row wrap;
