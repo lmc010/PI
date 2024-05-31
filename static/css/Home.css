@@ -289,6 +289,22 @@ li a:hover {
     align-items: center;
 }
 
+.buttonStyle {
+    background-color: transparent;
+    color: #7878ff;
+    border: 1px solid #7878ff;
+    font-size: 25px;
+    font-weight: bold;
+    
+    
+    display: flex;
+    cursor: pointer;
+  }
+
+  .buttonStyle:hover {
+    color: #fff;
+    background-color: #7878ff;
+  }
 
 .recomendados h1 {
   color: #952b95;
