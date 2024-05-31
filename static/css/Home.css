@@ -270,315 +270,28 @@ li a:hover {
   color: #7878ff;
 }
 
-.buttonHardSkillsOne {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 25px;
-  font-weight: bold;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 150px;
-  margin-top: 20px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
+.posiItensTrilhas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.itensHardSkills{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 80%;
+
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.buttonHardSkillsOne:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonHardSkillsTwo {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 25px;
-  font-weight: bold;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 370px;
-  margin-top: -50px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-.buttonHardSkillsTwo:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonHardSkillsThree {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 25px;
-  font-weight: bold;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 570px;
-  margin-top: -50px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonHardSkillsThree:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonHardSkillsFour {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 15px;
-  font-weight: bold;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  display: flex;
-  flex: row wrap;
-  margin-top: -50px;
-  margin-left: 770px;
-  cursor: pointer;
-}
-
-.buttonHardSkillsFour:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonHardSkillsFive {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 25px;
-  font-weight: bold;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: -50px;
-  margin-left: 970px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonHardSkillsFive:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.softSkills {
-  color: #952b95;
-  margin-left: 510px;
-  font-size: 25px;
-}
-
-.hrSoftSkills {
-  margin-left: 115px;
-  margin-top: 55px;
-  width: 1000px;
-  position: unset;
-}
-
-.hardSkills {
-  color: #952b95;
-  margin-left: 510px;
-  font-size: 25px;
-}
-
-.iconsHardSkills img {
-  margin-top: 50px;
-}
-
-.iconsHardSkillOne {
-  margin-left: 170px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsHardSkillTwo {
-  margin-left: 110px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsHardSkillThree {
-  margin-left: 90px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsHardSkillFour {
-  margin-left: 90px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsHardSkillFive {
-  margin-left: 100px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsSoftSkills img {
-  margin-top: 50px;
-}
-
-.iconsSoftSkillOne {
-  margin-left: 160px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsSoftSkillTwo {
-  margin-left: 120px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsSoftSkillThree {
-  margin-left: 90px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsSoftSkillFour {
-  margin-left: 100px;
-  width: 100px;
-  height: 100px;
-}
-
-.iconsSoftSkillFive {
-  margin-left: 90px;
-  width: 100px;
-  height: 100px;
-}
-
-.buttonSoftSkillsOne {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-left: 150px;
-  margin-top: 10px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonSoftSkillsOne:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonSoftSkillsTwo {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 25px;
-  font-weight: bold;
-  padding-left: 15px;
-  padding-right: 17px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 370px;
-  margin-top: -48px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonSoftSkillsTwo:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonSoftSkillsThree {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  margin-left: 570px;
-  margin-top: -48px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonSoftSkillsThree:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonSoftSkillsFour {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  display: flex;
-  flex: row wrap;
-  margin-top: -48px;
-  margin-left: 770px;
-  cursor: pointer;
-}
-
-.buttonSoftSkillsFour:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
-
-.buttonSoftSkillsFive {
-  background-color: transparent;
-  color: #7878ff;
-  border: 1px solid #7878ff;
-  font-size: 15px;
-  font-weight: bold;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: -45px;
-  margin-left: 970px;
-  display: flex;
-  flex: row wrap;
-  cursor: pointer;
-}
-
-.buttonSoftSkillsFive:hover {
-  color: #fff;
-  background-color: #7878ff;
-}
 
 .recomendados h1 {
   color: #952b95;
-  margin-left: 440px;
   font-size: 35px;
 }
 
@@ -707,12 +420,10 @@ li a:hover {
 
 .h1-recomendados {
   color: #952b95;
-  margin-left: 450px;
 }
 
 .cardsHardSkils {
   display: flex;
-  margin-left: 150px;
 }
 
 .cardsHardSkils img {
@@ -749,7 +460,7 @@ li a:hover {
 
 .cardTextOne p {
   color: #952b95;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -762,7 +473,7 @@ li a:hover {
 
 .cardTextTwo p {
   color: #952b95;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -775,7 +486,7 @@ li a:hover {
 
 .cardTextThree p {
   color: #952b95;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -788,7 +499,7 @@ li a:hover {
 
 .cardTextFour p {
   color: #952b95;
-  font-size: 15px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -802,7 +513,7 @@ li a:hover {
 .cardTextFive p {
   color: #952b95;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -815,7 +526,7 @@ li a:hover {
 .cardTextSix p {
   color: #952b95;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -883,7 +594,6 @@ li a:hover {
 
 .cardsSoftSkills {
   display: flex;
-  margin-left: 150px;
 }
 
 .cardsSoftSkills img {
@@ -1109,14 +819,19 @@ li a:hover {
 
 .ofertash1 {
   color: #952b95;
-  margin-left: 550px;
   margin-top: 100px;
   font-size: 25px;
   font-weight: bold;
 }
 
+.posiOfertas{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .divReact {
-  margin-left: 190px;
   border: 3px solid #7878ff;
   padding-left: 60px;
   padding-right: 50px;
@@ -1292,7 +1007,6 @@ li a:hover {
 }
 
 .divSoftSkills {
-  margin-left: 190px;
   border: 3px solid #7878ff;
   padding-left: 60px;
   padding-right: 50px;
