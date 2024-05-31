@@ -14,65 +14,46 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div>
-            <input type="text" name="name" placeholder="Digite Aqui..." class="inputNavbar">
-                <img src="static/imgs/Icon_magnifying glass.svg" class="magnifyingGlass">       
-            </input>
-
-              <a href="Login.html" class="login">Login</a>
-              <a href="Cadastro.html" class="cadastrar">Cadastrar-se</a>     
-             <img src="static/imgs//Icon_user.svg" class="user">
+    <div class="navbar">
+        <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
+        <div class="search-container">
+          <input type="text" placeholder="Pesquisar..." />
         </div>
-        
-
-    <div class="boxMenu">
-        <input type="checkbox" id="check">
-      <div class="menuIcon">       
-        <label for="check">
-          <img src="static/imgs//Icon_menu.svg">
-        </label> 
+        <div class="icons">
+          <img src="static/imgs/Image 17.svg" class="photo" />
+        </div>
       </div>
-
-
-       <nav class="sidebarMenu">     
-          <img class="logo" src="static/imgs//Logo_liberty 1.svg">
-         <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/perfil">Meu Perfil</a>
-            </li>
-            <li>
-                <a href="#">Meus Cursos</a>
-            </li>
-            <li>
-                <a href="#">Meus Certificados</a>
-            </li>
-            <li>
-                <a href="#">Suporte</a>
-            </li>
-            <li>
-                <a href="#">Configurações</a>
-            </li>
-            <li>
-                <a  href="Login.html">Fazer Logout</a>
-            </li>
-            
-            <div class="close">
-                <label for="check">
-              <img src="static/imgs//Icon_Exit.svg">
-              </label>
-             </div>
-            
-           </ul>
-           
-        </nav>
-
-        
-      </div>
-    </nav>
+  
+      <nav class="menu" id="menu">
+        <img class="logoMenu" src="static/imgs/Logo_liberty 1.svg" />
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/perfil">Meu Perfil</a>
+          </li>
+          <li>
+            <a href="#">Meus Cursos</a>
+          </li>
+          <li>
+            <a href="#">Meus Certificados</a>
+          </li>
+          <li>
+            <a href="#">Suporte</a>
+          </li>
+          <li>
+            <a href="#">Configurações</a>
+          </li>
+          <li>
+            <a href="Login.html">Fazer Logout</a>
+          </li>
+          <span class="menu-btn" onclick="toggleMenu()">
+            <img src="static/imgs/Icon_Exit.svg" width="50%" />
+          </span>
+        </ul>
+      </nav>
+  
     <br>
     <br>
     <br>
@@ -386,34 +367,50 @@
 
 
     <footer>
-        <div class="divFooterOne">
-             <h1 class="footerh1">Tá com duvida?</h1>
-             <p class="footerp" href="#">Quem somos</p>
-             <img src="static/imgs//Logo_liberty 1.svg" class="logoFooter">
-        </div>
-        <div class="divFooterTwo">
+        <div class="posiDivHeader">
+          <div class="divFooterOne">
+            <h1 class="footerh1">Tá com duvida?</h1>
+            <p class="footerp" href="#">Quem somos</p>
+            <img src="static/imgs/Logo_liberty 1.svg" class="logoFooter" />
+          </div>
+          <div class="divFooterTwo">
             <h1 class="footerTwoh1" href="#">Quer saber mais ?</h1>
             <p class="footerTwop" href="#">Contato</p>
-            <p class="footerTwop2" href="#">Trabalhe conosco</p>
-            <p class="footerTwop3" href="#">Termos</p>
-            <p class="footerTwop4" href="#">Politica de privacidade</p>
-            <p class="footerTwop5" href="#">Configurações de cookie</p>
-        </div>
-        <div class="divFooterThree">
+            <p class="footerTwop" href="#">Trabalhe conosco</p>
+            <p class="footerTwop" href="#">Termos</p>
+            <p class="footerTwop" href="#">Politica de privacidade</p>
+            <p class="footerTwop" href="#">Configurações de cookie</p>
+          </div>
+          <div class="divFooterThree">
             <div>
-                <div>
-               <h1 class="footerThreeh1">Fale com a gente</h1>
-                </div>
-               <img src="static/imgs//Icon_message.svg" class="iconMessage">
-               <img src="static/imgs//Icon_whatsapp.svg"   class="iconWhatsapp">
+              <h1 class="footerThreeh1">Fale com a gente</h1>
+              <div class="posiMidias">
+                <img src="static/imgs/Icon_message.svg" class="iconMessage" />
+                <img src="static/imgs/Icon_whatsapp.svg" class="iconWhatsapp" />
+              </div>
             </div>
-            <div>
-               <h2 class="footerThreeh2">Nossas Redes</h2>
-               <img src="static/imgs//Icon_instagram.svg"class="iconInstagram">
-               <img src="static/imgs//Icon_youtube.svg"class="iconYoutube">
-               <p class="footer3p">© 2023 Liberty Cursos, Inc</p>
+            <h2 class="footerThreeh2">Nossas Redes</h2>
+            <div class="posiMidias">
+              <img src="static/imgs/Icon_instagram.svg" class="iconInstagram" />
+              <img src="static/imgs/Icon_youtube.svg" class="iconYoutube" />
             </div>
+            <p class="footer3p">© 2024 Liberty Cursos, Inc</p>
+          </div>
         </div>
-    </footer>
+      </footer>
+  
+
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("open-menu")) {
+          menu.classList.remove("open-menu");
+        } else {
+          menu.classList.add("open-menu");
+        }
+      }
+
+    </script>
 </body>
 </html>
