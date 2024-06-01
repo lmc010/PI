@@ -114,12 +114,15 @@ body {
 
 .banner {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row-reverse
+
+
 }
 
 .banner img {
-  width: 450px;
-  margin-left: 780px;
-  margin-top: -50px;
+  width: 550px;
+  
 }
 
 .boxMenu {
@@ -255,18 +258,15 @@ li a:hover {
 
 .apresentacao {
   background-color: #ffffff;
-  margin-top: -380px;
 }
 
 .apresentacao h1 {
-  font-size: 50px;
+  font-size: 80px;
   color: #952b95;
-  margin-left: 80px;
 }
 
 .apresentacao p {
-  font-size: 20px;
-  margin-left: 40px;
+  font-size: 30px;
   color: #7878ff;
 }
 
@@ -281,12 +281,18 @@ li a:hover {
     align-items: flex-end;
     justify-content: space-between;
     width: 80%;
-
+    padding-top: 10px;
 }
 .item{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.softSkills {
+  color: #952b95;
+  font-size: 40px;
+  padding-top: 20px;
 }
 
 .buttonStyle {
