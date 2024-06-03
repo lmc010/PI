@@ -57,7 +57,14 @@ body {
     left: 0;
     width: 15%;
     height: 100%;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .posiItensMenuNav{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
   }
   .logoMenu {
     width: 50%;
@@ -65,19 +72,33 @@ body {
   
   ul {
     text-decoration: none;
-    width: 50%;
+    width: 100%;
+    padding-top: 20px;
   }
   
   li {
     text-decoration: none;
     list-style-type: none;
     margin-bottom: 30px;
+    width: 100%;
   }
   
+  
   li a {
-    font-size: 100%;
+    font-size: 20px;
+    display: block;
+    width: 100%;
     text-decoration: none;
     color: #fff;
+  }
+  
+  li :hover {
+    background-color: #952b95;
+    color: white;
+    width: 100%;
+  }
+  #check:checked ~ .sidebarMenu {
+    left: 0;
   }
   
   .menu-btn {
@@ -217,39 +238,7 @@ input[type="checkbox"] {
   margin-left: 40px;
 }
 
-li {
-  text-decoration: none;
-  list-style-type: none;
-}
 
-ul {
-  top: 120px;
-  position: absolute;
-  text-decoration: none;
-}
-
-li a {
-  font-size: 16px;
-  display: block;
-  padding: 10px;
-  width: 215px;
-  text-decoration: none;
-  color: #fff;
-}
-
-label h1 {
-  color: #000000;
-  position: relative;
-}
-
-li a:hover {
-  background-color: #952b95;
-  color: white;
-  width: 217px;
-}
-#check:checked ~ .sidebarMenu {
-  left: 0;
-}
 
 .close {
   margin-left: 100px;
@@ -261,12 +250,12 @@ li a:hover {
 }
 
 .apresentacao h1 {
-  font-size: 80px;
+  font-size: 65px;
   color: #952b95;
 }
 
 .apresentacao p {
-  font-size: 30px;
+  font-size: 25px;
   color: #7878ff;
 }
 
