@@ -15,9 +15,15 @@ body {
     width: 100%;
     background-color: #d926d9;
     justify-content: space-around;
-    padding: 10px;
   }
   
+  .posiNavbar{
+    display: flex;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+  }
+
   .navbar input[type="text"] {
     padding: 5px;
     font-size: 16px;
