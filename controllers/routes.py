@@ -4,8 +4,12 @@ from flask import redirect, render_template, request, url_for
 def init_app(app):
     @app.route('/')
     def home():
-        return render_template('Home.html')
+        return render_template('Login.html')
 
+    @app.route('/home')
+    def login():
+        return render_template('Home.html')
+    
     @app.route('/video')
     def video():
         return render_template('Video.html')
@@ -14,9 +18,6 @@ def init_app(app):
     def perfil():
         return render_template('Perfil.html')
     
-    @app.route('/login')
-    def login():
-        return render_template('Login.html')
     
     @app.route('/loading')
     def loading():

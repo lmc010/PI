@@ -27,6 +27,7 @@
   </head>
   <body>
     <div class="navbar">
+      <div class="posiNavbar">
       <span class="menu-btn" onclick="toggleMenu()">&#9776;</span>
       <div class="search-container">
         <input type="text" placeholder="Pesquisar..." />
@@ -35,12 +36,14 @@
         <img src="static/imgs/Image 17.svg" class="photo" />
       </div>
     </div>
+    </div>
 
     <nav class="menu" id="menu">
+      <div class="posiItensMenuNav">
       <img class="logoMenu" src="static/imgs/Logo_liberty 1.svg" />
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/home">Home</a>
         </li>
         <li>
           <a href="/perfil">Meu Perfil</a>
@@ -58,12 +61,13 @@
           <a href="#">Configurações</a>
         </li>
         <li>
-          <a href="Login.html">Fazer Logout</a>
+          <a href="/">Fazer Logout</a>
         </li>
         <span class="menu-btn" onclick="toggleMenu()">
-          <img src="static/imgs/Icon_Exit.svg" width="50%" />
+          <img src="static/imgs/Icon_Exit.svg" width="20%" />
         </span>
       </ul>
+    </div>
     </nav>
 
     <br />
