@@ -1,174 +1,164 @@
-body{
-    background-image:linear-gradient(135deg, rgb(237, 190, 245) ,rgb(255, 255, 255),#cbb9fc);
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+body {
+  background-image: linear-gradient(
+    135deg,
+    rgb(237, 190, 245),
+    rgb(255, 255, 255),
+    #cbb9fc
+  );
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
-.logo{
-    width:100px;
-    height:100px;
-    display: flex;
-    flex: row wrap;
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex: row wrap;
 }
 
-h1{
-    font-size: 60px;
-    margin-left: 200px;
-    margin-top:-100px ;
+h1 {
+  font-size: 60px;
+  margin-left: 200px;
+  margin-top: -100px;
+  font-weight: bold;
 }
 
-.p1{
-    margin-left: 220px;
-    font-size: 20px;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-
-    
+.p1 {
+  margin-left: 220px;
+  font-size: 20px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.p2{
-    margin-left: -380px;
-    margin-top: -38px;
-    font-weight: bold;
-    text-align: center;
-    
+.p2 {
+  margin-left: -550px;
+  margin-top: -38px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.img{
-    margin-top: -40px;
-    margin-left: 250px;
-    width:360px;
-    height:360px;
+.img {
+  margin-top: -40px;
+  margin-left: 250px;
+  width: 360px;
+  height: 360px;
 }
 
-
-
-form{
-    border-radius: 5px;
-    margin-left:800px;
-    margin-top: -460px;
-    width:350px ;
-    height: 380px;
-    background-color: transparent;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-  }
-
-form h1{
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: bold;
+form {
+  border-radius: 5px;
+  margin-left: 800px;
+  margin-top: -460px;
+  width: 350px;
+  height: 380px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
 }
 
-
-label{
-    margin-left: 20px;
-    padding-bottom: -20px;
-    font-weight: bold;
-    display: flex;
-    flex: row wrap;
-    
+form h1 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-
-.inputEmail{ 
-    margin-left: 20px;
-    width: 300px;
-    height: 25px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid black;
-    display: flex;
-    flex: row wrap;
-    
+label {
+  margin-left: 20px;
+  padding-bottom: -20px;
+  font-weight: bold;
+  display: flex;
+  flex: row wrap;
 }
 
-
-
-.link{
-    text-decoration: none;
-    color: #ffffff;
+.inputEmail {
+  margin-left: 20px;
+  width: 300px;
+  height: 25px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex: row wrap;
 }
 
-
-.inputPassword{ 
-    margin-left: 20px;
-    width: 300px;
-    height: 25px;
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
-    display: flex;
-    flex: row wrap;
+.link {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-form  p{
-    margin-top: 15px;
-    margin-left: 120px; 
-    display: flex;
-    flex: row wrap;
-    font-size: 15px;
-    font-weight: bold;
-    color: blue;
-    padding-bottom: 5px; 
-    cursor: pointer;
+.inputPassword {
+  margin-left: 20px;
+  width: 300px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex: row wrap;
 }
 
-form  p:hover{
-    text-decoration: underline;
+form p {
+  margin-top: 15px;
+  margin-left: 120px;
+  display: flex;
+  flex: row wrap;
+  font-size: 15px;
+  font-weight: bold;
+  color: blue;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
-
-.entrar{
-    background-color:#952B95;
-    color:#ffffff;
-    width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: 80px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    border: none;
-    cursor: pointer; 
+form p:hover {
+  text-decoration: underline;
 }
 
-.entrar a:hover{
-    color: rgb(70, 98, 240);
-    letter-spacing: 2px;
-    transform: scale(1.2);
-    transition: ease 1s;
+.entrar {
+  background-color: #952b95;
+  color: #ffffff;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 80px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
 }
 
-
-
-.cadastrar{
-    background-color: #952B95;
-    color:#ffffff;
-    width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 43px;
-    padding-right: 43px;
-    margin-left: 80px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-size: 15px;
-    border:none;
-    font-family:Arial, Helvetica, sans-serif;
-    cursor: pointer; 
+.entrar:hover {
+  background-color: rgb(70, 98, 240);
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  transition: ease 1s;
 }
 
-.cadastrar a:hover{
-    color: rgb(70, 98, 240);
-    letter-spacing: 2px;
-    transform: scale(1.2);
-    transition: ease 1s;
+.cadastrar {
+  background-color: #952b95;
+  color: #ffffff;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 43px;
+  padding-right: 43px;
+  margin-left: 80px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
+.cadastrar:hover {
+    background-color: rgb(70, 98, 240);
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  transition: ease 1s;
+}

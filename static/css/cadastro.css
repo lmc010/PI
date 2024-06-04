@@ -87,6 +87,8 @@ form{
     
 }
 
+
+
 .link{
     text-decoration: none;
     color: white;
@@ -94,13 +96,18 @@ form{
 }
 
 .link:hover{
-    color: rgb(70, 98, 240);
     letter-spacing: 2px;
     transform: scale(1.2);
     transition: ease 1s;
     
 }
 
+.button:hover{
+    background-color: rgb(70, 98, 240);
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    transition: ease 1s;
+}
 .input{
     margin-left: 20px;
     margin-top: 15px;

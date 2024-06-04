@@ -1,13 +1,72 @@
 from flask import redirect, render_template, request, url_for
-
+from flask import render_template, request, url_for, redirect, flash, session
+from models.database import db, Usuario
+from werkzeug.security import generate_password_hash, check_password_hash
+from markupsafe import Markup
+import urllib
+import json
 
 def init_app(app):
-    @app.route('/')
-    def home():
-        return render_template('Login.html')
+    
+    @app.before_request
+    def check_auth():
+        # Rotas que não precisam de autenticação
+        routes = ['login', 'cadastro', 'home']
+
+        # Se a rota atual não requer autenticação, permite o acesso
+        if request.endpoint in routes or request.path.startswith('/static/'):
+            return
+
+        # Se o usuário não estiver autenticado, redireciona para a página de login
+        if 'user_id' not in session:
+            return redirect(url_for('login'))
+
+    @app.route('/' , methods=['GET' , 'POST'])
+    def login():
+        if request.method == 'POST':
+            email = request.form['email']
+            password = request.form['password']
+
+            user = Usuario.query.filter_by(email=email).first()
+            
+            if user and check_password_hash(user.password, password):
+                session['user_id'] = user.id
+                session['email'] = user.email
+                nickname = user.email.split('@')
+                flash(f'Login bem-sucedido! Bem-vindo {nickname[0]}!', 'success')
+                return redirect(url_for('home'))
+            else:
+                flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
+        return render_template('login.html')
+    
+    # @app.route('/logout', methods=['GET', 'POST'])
+    # def logout():
+    #     session.clear()
+    #     flash('Desconectado com sucesso!', 'warning')
+    #     return redirect(url_for('home'))
+    
+    @app.route('/cadastro',methods=['GET' , 'POST'])
+    def cadastro():
+        if request.method == 'POST':
+            email = request.form['email']
+            password = request.form['password']
+            # Checar se user existe
+            user = Usuario.query.filter_by(email=email).first()
+            if user:
+                msg = Markup("Usuário já cadastrado. Faça<a href='/login'>login.</a>")
+                flash(msg, 'danger')
+                return redirect(url_for('caduser'))
+            else:
+                hashed_password = generate_password_hash(password, method='scrypt')
+                new_user = Usuario(email=email, password=hashed_password)
+                db.session.add(new_user)
+                db.session.commit()
+                flash('Registro realizado com sucesso! Faça o login.', 'success')
+                return redirect(url_for('login'))
+        return render_template('Cadastro.html')
 
     @app.route('/home')
-    def login():
+    def home():
         return render_template('Home.html')
     
     @app.route('/video')
@@ -31,9 +90,6 @@ def init_app(app):
     def curso():
         return render_template('Curso.html')
     
-    @app.route('/cadastro')
-    def cadastro():
-        return render_template('Cadastro.html')
     
     
   
