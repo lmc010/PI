@@ -11,7 +11,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home']
+        routes = ['login', 'cadastro', 'home' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -21,7 +21,7 @@ def init_app(app):
         if 'user_id' not in session:
             return redirect(url_for('login'))
 
-    @app.route('/' , methods=['GET' , 'POST'])
+    @app.route('/', methods=['GET', 'POST'])
     def login():
         if request.method == 'POST':
             email = request.form['email']
@@ -45,7 +45,7 @@ def init_app(app):
     #     flash('Desconectado com sucesso!', 'warning')
     #     return redirect(url_for('home'))
     
-    @app.route('/cadastro',methods=['GET' , 'POST'])
+    @app.route('/cadastro', methods=['GET', 'POST'])
     def cadastro():
         if request.method == 'POST':
             email = request.form['email']
@@ -55,7 +55,7 @@ def init_app(app):
             if user:
                 msg = Markup("Usuário já cadastrado. Faça<a href='/login'>login.</a>")
                 flash(msg, 'danger')
-                return redirect(url_for('caduser'))
+                return redirect(url_for('cadastro'))
             else:
                 hashed_password = generate_password_hash(password, method='scrypt')
                 new_user = Usuario(email=email, password=hashed_password)
@@ -63,7 +63,8 @@ def init_app(app):
                 db.session.commit()
                 flash('Registro realizado com sucesso! Faça o login.', 'success')
                 return redirect(url_for('login'))
-        return render_template('Cadastro.html')
+
+        return render_template('cadastro.html')
 
     @app.route('/home')
     def home():
