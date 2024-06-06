@@ -14,6 +14,7 @@
     <title>Cadastro</title>
   </head>
   <body>
+    {% block content %}
     <div>
       <img src="static/imgs/Logo_liberty 2.svg" class="logo" />
       <h1>LIBERTY CURSOS</h1>
@@ -29,6 +30,13 @@
     </div>
     <div>
 
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endwith %}
 
       <form id="form" action="{{url_for('cadastro')}}" method="post">
         <p>Cadastrar-se</p>
@@ -42,11 +50,11 @@
         </div>
 
         <div>
-          <input type="email" id="email" class="input" placeholder="E-mail" />
+          <input type="email" id="email" name="email" class="input" placeholder="E-mail" />
         </div>
 
         <div>
-          <input type="password" id="senha" class="input" placeholder="Senha" />
+          <input type="password" id="senha" name="password" class="input" placeholder="Senha" />
         </div>
 
         <!-- <div>
@@ -66,3 +74,5 @@
     </div>
   </body>
 </html>
+
+{% endblock content %}

@@ -37,7 +37,7 @@ def init_app(app):
                 return redirect(url_for('home'))
             else:
                 flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
-        return render_template('login.html')
+        return render_template('home.html')
     
     # @app.route('/logout', methods=['GET', 'POST'])
     # def logout():
