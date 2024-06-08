@@ -37,7 +37,7 @@ def init_app(app):
                 return redirect(url_for('home'))
             else:
                 flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
-        return render_template('home.html')
+        return render_template('login.html')
     
     # @app.route('/logout', methods=['GET', 'POST'])
     # def logout():
@@ -55,7 +55,7 @@ def init_app(app):
             if user:
                 msg = Markup("Usuário já cadastrado. Faça<a href='/login'>login.</a>")
                 flash(msg, 'danger')
-                return redirect(url_for('cadastro'))
+                return redirect(url_for('login'))
             else:
                 hashed_password = generate_password_hash(password, method='scrypt')
                 new_user = Usuario(email=email, password=hashed_password)
