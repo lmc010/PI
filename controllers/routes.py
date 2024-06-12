@@ -11,7 +11,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home' ]
+        routes = ['login', 'cadastro', 'home', 'perfil' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -37,7 +37,7 @@ def init_app(app):
                 return redirect(url_for('home'))
             else:
                 flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
-        return render_template('login.html')
+        return render_template('home.html')
     
     # @app.route('/logout', methods=['GET', 'POST'])
     # def logout():
