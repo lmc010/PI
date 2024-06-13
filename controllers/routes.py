@@ -50,26 +50,26 @@ def init_app(app):
     @app.route('/cadastro', methods=['GET', 'POST'])
     def cadastro():
         if request.method == 'POST':
-            nome = request.form['nome']
-            email = request.form['email']
-            password = request.form['password']
-            user = Usuario.query.filter_by(email=email).first()
-            if user:
-                msg = Markup("Usuário já cadastrado. Faça <a href='/login'>login</a>.")
-                flash(msg, 'danger')
-                return redirect(url_for('cadastro'))
-            else:
-           # print(email, password)
-                hashed_password = generate_password_hash(password, method='scrypt')
-                new_user = Usuario(email=email, password=hashed_password)
-                db.session.add(new_user)
-                db.session.commit()
+            if request.form.get('nome') and request.form.get('email') and request.form.get('password'):
+                userList.append({'Nome' : request.form.get('nome'), 'Email' : request.form.get('email'), 'Password' : request.form.get('password')})
 
             flash('Registro realizado com sucesso! Faça login', 'success')
             return redirect(url_for('login'))        
-        return render_template('cadastro.html')    
-                    
-        
+        return render_template('cadastro.html', userList=userList) 
+    
+    @app.route('/editar', methods=['GET', 'POST'])
+    def editar():
+        user = Usuario.query.get_or_404()
+        if request.method == 'POST':
+            user.nome = request.form['nome']
+            user.email = request.form['email']
+            user.password = generate_password_hash(request.form['password'], method='scrypt')
+            db.session.commit()
+            flash('Usuário editado com sucesso!', 'success')
+            return redirect(url_for('perfil'))
+        return render_template('editar.html')
+                   
+                
     @app.route('/home')
     def home():
         return render_template('Home.html')
@@ -85,12 +85,8 @@ def init_app(app):
     
     @app.route('/loading')
     def loading():
-        return render_template('Loading.html')
-    
-    @app.route('/editar')
-    def editar():
-        return render_template('Editar.html')
-    
+        return render_template('Loading.html')   
+     
     @app.route('/curso')
     def curso():
         return render_template('Curso.html')

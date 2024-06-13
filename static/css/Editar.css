@@ -194,13 +194,13 @@ label{
     color: #952B95;
 }
 
-.surname{
+.email{
      margin-top: 15px;
-     margin-left: 100px;
+     margin-left: 140px;
 }
 
 
-.email{
+.senha{
     margin-top: 15px;
     margin-left: 140px;
 }
@@ -213,7 +213,7 @@ label{
     border: 1px solid;
 }
 
-.inputLastname{
+.inputEmail{
     background-color: transparent;
     border-radius: 5px;
     margin-left:215px;
@@ -223,7 +223,7 @@ label{
 }
 
 
-.inputEmail{
+.inputSenha{
     background-color: transparent;
     border-radius: 5px;
     margin-left:215px;

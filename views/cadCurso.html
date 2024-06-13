@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="static/css/cadastro.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <title>Cadastro</title>
+</head>
+
+<body>
+  {% block content %}
+  <div>
+    <img src="static/imgs/Logo_liberty 2.svg" class="logo" />
+    <h1>LIBERTY CURSOS</h1>
+    <p class="p1">Educação: A Chave para a Autonomia Feminina.</p>
+    <img src="static/imgs/Image 2.svg" class="img" />
+    <p class="p2">
+      A educação não apenas fornece habilidades práticas,<br />
+      mas também fortalece a autoestima e a confiança das<br />
+      mulheres. Através do conhecimento, elas podem<br />
+      quebrar ciclos de dependência, superar desigualdades<br />
+      e moldar um mundo onde todas as mulheres têm voz e <br />oportunidade.
+    </p>
+  </div>
+  <div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endwith %}
+
+    <form id="form" action="{{url_for('cadCurso')}}", method="POST">
+      <p>Cadastrar-se</p>
+      <div>
+        <input type="text" name="nomeCurso" id="name" class="input" placeholder="Nome do Curso" />
+      </div>
+
+      <div>
+        <input type="text" id="descricao" name="descricao" class="input" placeholder="descrição" />
+      </div>
+
+      <div>
+        <input type="number" id="valor" name="valor" class="input" placeholder="valor" />
+      </div>
+      <div>
+        <input type="number" id="cargaHoraria" name="cargaHoraria" class="input" placeholder="cargaHoraria" />
+      </div>
+
+      <!-- <div>
+          <input
+            type="password"
+            id="confirmarsenha"
+            class="input"
+            placeholder="Confirmar Senha"
+          />
+        </div> -->
+      <div>
+        <button type="submit" class="button">
+          <a href="/cursos" class="link">Cadastrar-se</a>
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
+{% endblock content %}
