@@ -232,6 +232,8 @@ li a:hover{
     font-size: 20px;
     margin-left: 40px;
     color: #952B95;
+    text-align: justify;
+    margin-right: 40px;
 }
 
 .icons hr{

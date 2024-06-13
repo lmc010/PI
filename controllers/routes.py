@@ -11,7 +11,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home', 'perfil' ]
+        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -19,9 +19,9 @@ def init_app(app):
 
         # Se o usuário não estiver autenticado, redireciona para a página de login
         if 'user_id' not in session:
-            return redirect(url_for('login'))
+            return redirect(url_for('home'))
 
-    @app.route('/', methods=['GET', 'POST'])
+    @app.route('/login', methods=['GET', 'POST'])
     def login():
         if request.method == 'POST':
             email = request.form['email']
@@ -37,7 +37,7 @@ def init_app(app):
                 return redirect(url_for('home'))
             else:
                 flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
-        return render_template('home.html')
+        return render_template('login.html')
     
     # @app.route('/logout', methods=['GET', 'POST'])
     # def logout():
