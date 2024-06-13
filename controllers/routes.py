@@ -41,17 +41,33 @@ def init_app(app):
                 flash('Falha no login. Verifique seu nome de usuário e senha.', 'danger') 
         return render_template('login.html')
     
-    # @app.route('/logout', methods=['GET', 'POST'])
-    # def logout():
-    #     session.clear()
-    #     flash('Desconectado com sucesso!', 'warning')
-    #     return redirect(url_for('home'))    
+    @app.route('/logout', methods=['GET', 'POST'])
+    def logout():
+        session.clear()
+        flash('Desconectado com sucesso!', 'warning')
+        return redirect(url_for('home'))    
     
     @app.route('/cadastro', methods=['GET', 'POST'])
     def cadastro():
         if request.method == 'POST':
-            if request.form.get('nome') and request.form.get('email') and request.form.get('password'): userList.append({'Nome' : request.form.get('nome'), 'E-mail' : request.form.get('email'), 'Senha' : request.form.get('password')})
-        return render_template('cadastro.html')       
+            nome = request.form['nome']
+            email = request.form['email']
+            password = request.form['password']
+            user = Usuario.query.filter_by(email=email).first()
+            if user:
+                msg = Markup("Usuário já cadastrado. Faça <a href='/login'>login</a>.")
+                flash(msg, 'danger')
+                return redirect(url_for('cadastro'))
+            else:
+           # print(email, password)
+                hashed_password = generate_password_hash(password, method='scrypt')
+                new_user = Usuario(email=email, password=hashed_password)
+                db.session.add(new_user)
+                db.session.commit()
+
+            flash('Registro realizado com sucesso! Faça login', 'success')
+            return redirect(url_for('login'))        
+        return render_template('cadastro.html')    
                     
         
     @app.route('/home')
