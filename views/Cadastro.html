@@ -37,10 +37,10 @@
     {% endfor %}
     {% endwith %}
 
-    <form id="form" action="{{url_for('cadastro')}}" method="post">
+    <form id="form" action="{{url_for('cadastro')}}" method="get">
       <p>Cadastrar-se</p>
       <div>
-        <input type="text" id="name" class="input" placeholder="Nome Completo" />
+        <input type="text" name="nome" id="name" class="input" placeholder="Nome Completo" />
       </div>
 
       <div>

@@ -6,6 +6,8 @@ from markupsafe import Markup
 import urllib
 import json
 
+userList = []
+
 def init_app(app):
     
     @app.before_request
@@ -43,29 +45,15 @@ def init_app(app):
     # def logout():
     #     session.clear()
     #     flash('Desconectado com sucesso!', 'warning')
-    #     return redirect(url_for('home'))
+    #     return redirect(url_for('home'))    
     
     @app.route('/cadastro', methods=['GET', 'POST'])
     def cadastro():
         if request.method == 'POST':
-            email = request.form['email']
-            password = request.form['password']
-            # Checar se user existe
-            user = Usuario.query.filter_by(email=email).first()
-            if user:
-                msg = Markup("Usuário já cadastrado. Faça<a href='/login'>login.</a>")
-                flash(msg, 'danger')
-                return redirect(url_for('login'))
-            else:
-                hashed_password = generate_password_hash(password, method='scrypt')
-                new_user = Usuario(email=email, password=hashed_password)
-                db.session.add(new_user)
-                db.session.commit()
-                flash('Registro realizado com sucesso! Faça o login.', 'success')
-                return redirect(url_for('login'))
-
-        return render_template('cadastro.html')
-
+            if request.form.get('nome') and request.form.get('email') and request.form.get('password'): userList.append({'Nome' : request.form.get('nome'), 'E-mail' : request.form.get('email'), 'Senha' : request.form.get('password')})
+        return render_template('cadastro.html')       
+                    
+        
     @app.route('/home')
     def home():
         return render_template('Home.html')
