@@ -94,7 +94,7 @@ def init_app(app):
             print(new_curso)
             flash('Curso cadastrado com sucesso!', 'success')
             return redirect(url_for('home'))        
-        return render_template('cadCurso.html')
+        return render_template('cadCurso.html', curso=curso)
     
     @pp.route('/editCurso', methods=['GET', 'POST'])
     def editCurso():

@@ -37,7 +37,7 @@
     {% endfor %}
     {% endwith %}
 
-    <form id="form" action="{{url_for('cadCurso')}}", method="POST">
+    <form id="form" action="{{url_for('cadCurso')}}" , method="POST">
       <p>Cadastrar-se</p>
       <div>
         <input type="text" name="nomeCurso" id="name" class="input" placeholder="Nome do Curso" />
@@ -54,6 +54,29 @@
         <input type="number" id="cargaHoraria" name="cargaHoraria" class="input" placeholder="cargaHoraria" />
       </div>
 
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do Curso</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Carga Horária</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for curso in cursos %}
+            <tr>
+              <td>{{ curso.nomeCurso }}</td>
+              <td>{{ curso.descricao }}</td>
+              <td>{{ curso.valor }}</td>
+              <td>{{ curso.cargaHoraria }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
       <!-- <div>
           <input
             type="password"
@@ -63,7 +86,7 @@
           />
         </div> -->
       <div>
-        <input type="submit" class="button" value="Cadastrar">       
+        <input type="submit" class="button" value="Cadastrar">
       </div>
     </form>
   </div>
