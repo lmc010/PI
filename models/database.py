@@ -14,3 +14,15 @@ class Usuario(db.Model):
         self.email = email
         self.password = password
         
+class Curso(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nomeCurso = db.Column(db.String(100), nullable=False)
+    descricao = db.Column(db.String(100), nullable=False)
+    valor = db.Column(db.String(100), nullable=False)
+    cargaHoraria = db.Colunm(db.String(50), nullable=False)
+    
+    def __init__(self, nomeCurso, descricao, valor, cargaHoraria):
+        self.nomeCurso = nomeCurso
+        self.descricao = descricao
+        self.valor = valor
+        self.cargaHoraria = cargaHoraria

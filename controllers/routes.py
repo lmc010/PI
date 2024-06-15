@@ -1,12 +1,13 @@
 from flask import redirect, render_template, request, url_for
 from flask import render_template, request, url_for, redirect, flash, session
-from models.database import db, Usuario
+from models.database import db, Usuario, Curso
 from werkzeug.security import generate_password_hash, check_password_hash
 from markupsafe import Markup
 import urllib
 import json
 
 userList = []
+cursoList = []
 
 def init_app(app):
     
@@ -63,9 +64,7 @@ def init_app(app):
                 hashed_password = generate_password_hash(password, method='scrypt')
                 new_user = Usuario(email=email, password=hashed_password, nome=nome)
                 db.session.add(new_user)
-                db.session.commit()
-                print(new_user)
-
+                db.session.commit()               
             flash('Registro realizado com sucesso! Faça login', 'success')
             return redirect(url_for('login'))        
         return render_template('cadastro.html')   
@@ -81,7 +80,43 @@ def init_app(app):
             flash('Usuário editado com sucesso!', 'success')
             return redirect(url_for('perfil'))
         return render_template('editar.html')
-                   
+    
+    @app.route('/cadCurso', methods=['GET', 'POST'])
+    def cadCurso():
+        if request.method == 'POST':
+            nomeCurso = request.form['nomeCurso']
+            descricao = request.form['descricao']
+            cargaHoraria = request.form['cargaHoraria']
+            valor = request.form['valor']
+            new_curso = Curso(nomeCurso=nomeCurso, descricao=descricao, cargaHoraria=cargaHoraria, valor=valor)
+            db.session.add(new_curso)
+            db.session.commit()
+            print(new_curso)
+            flash('Curso cadastrado com sucesso!', 'success')
+            return redirect(url_for('home'))        
+        return render_template('cadCurso.html')
+    
+    @pp.route('/editCurso', methods=['GET', 'POST'])
+    def editCurso():
+        curso = Curso.query.get_or_404()
+        if request.method == 'POST':
+            curso.nomeCurso = request.form['nomeCurso']
+            curso.descricao = request.form['descricao']
+            curso.cargaHoraria = request.form['cargaHoraria']
+            curso.valor = request.form['valor']
+            db.session.commit()
+            flash('Curso editado com sucesso!', 'success')
+            return redirect(url_for('home'))
+        return render_template('editCurso.html')
+    
+    @app.route('deletCurso')
+    def deleteCurso():
+        curso = Curso.query.get_or_404()
+        db.session.delete(curso)
+        db.session.commit()
+        flash('Curso deletado com sucesso!', 'warning')
+        return redirect(url_for('editCurso'))         
+                  
                 
     @app.route('/home')
     def home():
