@@ -96,9 +96,9 @@ def init_app(app):
             return redirect(url_for('home'))        
         return render_template('cadCurso.html', curso=curso)
     
-    @pp.route('/editCurso', methods=['GET', 'POST'])
-    def editCurso():
-        curso = Curso.query.get_or_404()
+    @app.route('/update_curso/<int:id>', methods=['GET', 'POST'])
+    def update_curso(id):
+        curso = Curso.query.get_or_404(id)
         if request.method == 'POST':
             curso.nomeCurso = request.form['nomeCurso']
             curso.descricao = request.form['descricao']
@@ -107,7 +107,7 @@ def init_app(app):
             db.session.commit()
             flash('Curso editado com sucesso!', 'success')
             return redirect(url_for('home'))
-        return render_template('editCurso.html')
+        return render_template('cadCurso.html')
     
     @app.route('deletCurso')
     def deleteCurso():

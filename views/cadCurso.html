@@ -14,7 +14,7 @@
 
 <body>
   {% block content %}
-  <div>
+  <!--<div>
     <img src="static/imgs/Logo_liberty 2.svg" class="logo" />
     <h1>LIBERTY CURSOS</h1>
     <p class="p1">Educação: A Chave para a Autonomia Feminina.</p>
@@ -26,7 +26,7 @@
       quebrar ciclos de dependência, superar desigualdades<br />
       e moldar um mundo onde todas as mulheres têm voz e <br />oportunidade.
     </p>
-  </div>
+  </div>!-->
   <div>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -38,7 +38,7 @@
     {% endwith %}
 
     <form id="form" action="{{url_for('cadCurso')}}" , method="POST">
-      <p>Cadastrar-se</p>
+      <p>Cadastrar</p>
       <div>
         <input type="text" name="nomeCurso" id="name" class="input" placeholder="Nome do Curso" />
       </div>
@@ -52,6 +52,9 @@
       </div>
       <div>
         <input type="number" id="cargaHoraria" name="cargaHoraria" class="input" placeholder="cargaHoraria" />
+      </div>
+      <div class="btnCadastrar">
+        <input type="submit" value="Cadastrar">
       </div>
 
       <div>
@@ -71,15 +74,16 @@
               <td>{{ curso.descricao }}</td>
               <td>{{ curso.valor }}</td>
               <td>{{ curso.cargaHoraria }}</td>
+              <td>
+                <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>
+              </td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
-      </div>
+      </div>      
       
-      <div>
-        <input type="submit" class="button" value="Cadastrar">
-      </div>
     </form>
   </div>
 </body>
