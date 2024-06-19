@@ -14,18 +14,18 @@
 
 <body>
   {% block content %}
-  <div>
+  
     <img src="static/imgs/Logo_liberty 2.svg" class="logo" />
     <h1>LIBERTY CURSOS</h1>
     <p class="p1">Educação: A Chave para a Autonomia Feminina.</p>
     <img src="static/imgs/Image 2.svg" class="img" />
-    <p class="p2">
+    <!--<p class="p2">
       A educação não apenas fornece habilidades práticas,<br />
       mas também fortalece a autoestima e a confiança das<br />
       mulheres. Através do conhecimento, elas podem<br />
       quebrar ciclos de dependência, superar desigualdades<br />
       e moldar um mundo onde todas as mulheres têm voz e <br />oportunidade.
-    </p>
+    </p>!-->
   </div>
   <div>
 
@@ -38,30 +38,31 @@
     {% endwith %}
 
     <form id="form" action="{{url_for('cadCurso')}}" , method="POST">
-      <p>Cadastrar-se</p>
+      <p>Cadastro de Cursos</p>
       <div>
         <input type="text" name="nomeCurso" id="name" class="input" placeholder="Nome do Curso" />
       </div>
 
       <div>
-        <input type="text" id="descricao" name="descricao" class="input" placeholder="descrição" />
+        <input type="text" id="descricao" name="descricao" class="input" placeholder="Descrição" />
       </div>
 
       <div>
-        <input type="number" id="valor" name="valor" class="input" placeholder="valor" />
+        <input type="text" id="valor" name="valor" class="input" placeholder="Valor" />
       </div>
       <div>
-        <input type="number" id="cargaHoraria" name="cargaHoraria" class="input" placeholder="cargaHoraria" />
+        <input type="text" id="cargaHoraria" name="cargaHoraria" class="input" placeholder="Carga Horária" />
       </div>
+      <br>
 
       <div>
-        <table>
+        <table border="1px">
           <thead>
             <tr>
-              <th>Nome do Curso</th>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Carga Horária</th>
+              <th>Nome do Curso   </th>
+              <th>Descrição       </th>
+              <th>Valor           </th>
+              <th>Carga Horária   </th>
             </tr>
           </thead>
           <tbody>
@@ -72,11 +73,12 @@
               <td>{{ curso.valor }}</td>
               <td>{{ curso.cargaHoraria }}</td>
             </tr>
+            <input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('atualiza_curso', id=curso.id) }}'">
             {% endfor %}
           </tbody>
         </table>
       </div>
-      
+      <br>
       <div>
         <input type="submit" class="button" value="Cadastrar">
       </div>

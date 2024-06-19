@@ -19,7 +19,7 @@ class Curso(db.Model):
     nomeCurso = db.Column(db.String(100), nullable=False)
     descricao = db.Column(db.String(100), nullable=False)
     valor = db.Column(db.String(100), nullable=False)
-    cargaHoraria = db.Colunm(db.String(50), nullable=False)
+    cargaHoraria = db.Column(db.String(100), nullable=False)
     
     def __init__(self, nomeCurso, descricao, valor, cargaHoraria):
         self.nomeCurso = nomeCurso

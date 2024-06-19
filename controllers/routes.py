@@ -14,7 +14,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar' ]
+        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar','cadCurso' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -90,32 +90,18 @@ def init_app(app):
             valor = request.form['valor']
             new_curso = Curso(nomeCurso=nomeCurso, descricao=descricao, cargaHoraria=cargaHoraria, valor=valor)
             db.session.add(new_curso)
-            db.session.commit()
-            print(new_curso)
-            flash('Curso cadastrado com sucesso!', 'success')
-            return redirect(url_for('home'))        
+            db.session.commit()            
+            return redirect(url_for('cadCurso'))        
         return render_template('cadCurso.html', curso=curso)
     
-    @pp.route('/editCurso', methods=['GET', 'POST'])
-    def editCurso():
-        curso = Curso.query.get_or_404()
-        if request.method == 'POST':
-            curso.nomeCurso = request.form['nomeCurso']
-            curso.descricao = request.form['descricao']
-            curso.cargaHoraria = request.form['cargaHoraria']
-            curso.valor = request.form['valor']
-            db.session.commit()
-            flash('Curso editado com sucesso!', 'success')
-            return redirect(url_for('home'))
-        return render_template('editCurso.html')
+    from flask import render_template
+
+    @app.route('/cursos')
+    def lista_cursos():
+        cursos = Curso.query.all()  # assuming you have a Curso model
+        return render_template('lista_cursos.html', cursos=cursos)
     
-    @app.route('deletCurso')
-    def deleteCurso():
-        curso = Curso.query.get_or_404()
-        db.session.delete(curso)
-        db.session.commit()
-        flash('Curso deletado com sucesso!', 'warning')
-        return redirect(url_for('editCurso'))         
+           
                   
                 
     @app.route('/home')
