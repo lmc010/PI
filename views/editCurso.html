@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/editCurso.css">
     <title>Document</title>
 </head>
+
 <body>
     <div>
-        <table border="1px">
-              <thead>
+        <table>
+            <thead>
                 <tr>
-                  <th>Nome do Curso   </th>
-                  <th>Descrição       </th>
-                  <th>Valor           </th>
-                  <th>Carga Horária   </th>
+                    <th>Nome do Curso </th>
+                    <th>Descrição </th>
+                    <th>Valor </th>
+                    <th>Carga Horária </th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
                 {% for curso in cursos %}
                 <tr>
-                  <td>{{ curso.nomeCurso }}</td>
-                  <td>{{ curso.descricao }}</td>
-                  <td>{{ curso.valor }}</td>
-                  <td>{{ curso.cargaHoraria }}</td>
-                  <td>
-                   <!-- <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
+                    <td>{{ curso.nomeCurso }}</td>
+                    <td>{{ curso.descricao }}</td>
+                    <td>{{ curso.valor }}</td>
+                    <td>{{ curso.cargaHoraria }}</td>
+                    <td>
+                        <!-- <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
                         <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>!-->
-                  </td>
+                    </td>
                 </tr>
-                <input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('atualiza_curso', id=curso.id) }}'">
+                <!--<input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('editCurso', id=curso.id) }}'">!-->
                 {% endfor %}
-              </tbody>
-            </table>
+            </tbody>
+        </table>
 </body>
+
 </html>

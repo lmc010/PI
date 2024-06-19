@@ -91,19 +91,13 @@ def init_app(app):
             new_curso = Curso(nomeCurso=nomeCurso, descricao=descricao, cargaHoraria=cargaHoraria, valor=valor)
             db.session.add(new_curso)
             db.session.commit()            
-            return redirect(url_for('editCurso.html'))        
-        return render_template('cadCurso.html', curso=curso)
+            return redirect(url_for('editCurso'))        
+        return render_template('cadCurso.html', curso=curso)  
     
-    '''@app.route('/editCurso')
-    def cursos():
-         if request.method =='POST':
-            if request.form.get('nomeCurso') and request.form.get('descricao') and request.form.get('valor') and request.form.get('cargaHoraria'):
-                cursoList.append({'Nome Curso':request.form.get('nomeCurso'),'Descrição':request.form.get('descricao'),'Valor':request.form.get('valor'),'Carga Horaria':request.form.get('cargaHoraria')})        
-         return render_template('editCurso.html', cursoList=cursoList)'''
 
-    @app.route('/update_curso/<int:id>', methods=['GET', 'POST'])
-    def editCurso(id):
-        curso = Curso.query.get_or_404(id)
+    @app.route('/editCurso', methods=['GET', 'POST'])
+    def editCurso():
+        curso = Curso.query.all()
         if request.method == 'POST':
             curso.nomeCurso = request.form['nomeCurso']
             curso.descricao = request.form['descricao']
@@ -111,12 +105,12 @@ def init_app(app):
             curso.valor = request.form['valor']
             db.session.commit()
             flash('Curso editado com sucesso!', 'success')
-            return redirect(url_for('cursos'))
+            return redirect(url_for('editCurso'))
         return render_template('editCurso.html')
     
-    @app.route('/deleteCurso/<int:id>')
-    def deleteCurso(id):
-        curso = Curso.query.get_or_404(id)
+    @app.route('/deleteCurso')
+    def deleteCurso():
+        curso = Curso.query.all()
         db.session.delete(curso)
         db.session.commit()
         flash('Curso deletado com sucesso!', 'warning')
