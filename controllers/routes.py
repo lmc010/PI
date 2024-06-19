@@ -14,7 +14,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar','cadCurso','catalogo' ]
+        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar','cadCurso','editCurso' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -91,15 +91,15 @@ def init_app(app):
             new_curso = Curso(nomeCurso=nomeCurso, descricao=descricao, cargaHoraria=cargaHoraria, valor=valor)
             db.session.add(new_curso)
             db.session.commit()            
-            return redirect(url_for('cadCurso'))        
+            return redirect(url_for('editCurso.html'))        
         return render_template('cadCurso.html', curso=curso)
     
-    @app.route('/catalogo')
+    '''@app.route('/editCurso')
     def cursos():
          if request.method =='POST':
             if request.form.get('nomeCurso') and request.form.get('descricao') and request.form.get('valor') and request.form.get('cargaHoraria'):
                 cursoList.append({'Nome Curso':request.form.get('nomeCurso'),'Descrição':request.form.get('descricao'),'Valor':request.form.get('valor'),'Carga Horaria':request.form.get('cargaHoraria')})        
-         return render_template('catalogo.html', cursoList=cursoList)
+         return render_template('editCurso.html', cursoList=cursoList)'''
 
     @app.route('/update_curso/<int:id>', methods=['GET', 'POST'])
     def editCurso(id):
