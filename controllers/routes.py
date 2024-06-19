@@ -94,14 +94,26 @@ def init_app(app):
             return redirect(url_for('cadCurso'))        
         return render_template('cadCurso.html', curso=curso)
     
-    from flask import render_template
-
-    @app.route('/cursos')
-    def lista_cursos():
-        cursos = Curso.query.all()  # assuming you have a Curso model
-        return render_template('lista_cursos.html', cursos=cursos)
+    @app.route('/editCurso', methods=['GET', 'POST'])
+    def editCurso():
+        curso = Curso.query.get_or_404()
+        if request.method == 'POST':
+            curso.nomeCurso = request.form['nomeCurso']
+            curso.descricao = request.form['descricao']
+            curso.cargaHoraria = request.form['cargaHoraria']
+            curso.valor = request.form['valor']
+            db.session.commit()
+            flash('Curso editado com sucesso!', 'success')
+            return redirect(url_for('home'))
+        return render_template('editCurso.html')
     
-           
+    @app.route('deletCurso')
+    def deleteCurso():
+        curso = Curso.query.get_or_404()
+        db.session.delete(curso)
+        db.session.commit()
+        flash('Curso deletado com sucesso!', 'warning')
+        return redirect(url_for('editCurso'))         
                   
                 
     @app.route('/home')
