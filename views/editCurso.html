@@ -31,7 +31,7 @@
                         <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>!-->
                     </td>
                 </tr>
-                <!--<input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('editCurso', id=curso.id) }}'">!-->
+                <input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('editCurso', id=curso.id) }}'">
                 {% endfor %}
             </tbody>
         </table>
