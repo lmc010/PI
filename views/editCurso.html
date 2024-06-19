@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <form action="{{ url_for('editCurso')}}" method="POST">
     <div>
         <table>
             <thead>
@@ -35,6 +36,7 @@
                 {% endfor %}
             </tbody>
         </table>
+    </form>
 </body>
 
 </html>
