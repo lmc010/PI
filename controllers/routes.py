@@ -95,7 +95,7 @@ def init_app(app):
         return render_template('cadCurso.html', curso=curso)  
     
 
-    @app.route('/editCurso', methods=['GET', 'POST'])
+    @app.route('/editCurso', methods=['GET'])
     def editCurso():
         curso = Curso.query.all()
         if request.method == 'POST':
@@ -106,7 +106,7 @@ def init_app(app):
             db.session.commit()
             flash('Curso editado com sucesso!', 'success')
             return redirect(url_for('editCurso'))
-        return render_template('editCurso.html')
+        return render_template('editCurso.html', curso=curso)
     
     @app.route('/deleteCurso')
     def deleteCurso():
@@ -114,7 +114,7 @@ def init_app(app):
         db.session.delete(curso)
         db.session.commit()
         flash('Curso deletado com sucesso!', 'warning')
-        return redirect(url_for('cursos'))       
+        return redirect(url_for('cursos'))     
                   
                 
     @app.route('/home')

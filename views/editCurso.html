@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <form action="{{ url_for('editCurso')}}" method="POST">
+
     <div>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>Nome do Curso </th>
@@ -28,15 +28,17 @@
                     <td>{{ curso.valor }}</td>
                     <td>{{ curso.cargaHoraria }}</td>
                     <td>
-                        <!-- <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
-                        <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>!-->
+                        <input type="submit" class="btn btn-primary"
+                            onclick="location.href='{{ url_for('editCurso', id=curso.id) }}'">Atualizar</button>
+                        <button type="button" class="btn btn-danger"
+                            onclick="location.href='{{ url_for('deleteCurso', id=curso.id) }}'">Excluir</button>
                     </td>
                 </tr>
-                <input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('editCurso', id=curso.id) }}'">
+
                 {% endfor %}
             </tbody>
         </table>
-    </form>
+    </div>
 </body>
 
 </html>
