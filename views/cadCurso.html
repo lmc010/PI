@@ -38,7 +38,7 @@
     {% endwith %}
 
     <form id="form" action="{{url_for('cadCurso')}}" , method="POST">
-      <p>Cadastrar-se</p>
+      <p>Cadastrar Curso</p>
       <div>
         <input type="text" name="nomeCurso" id="name" class="input" placeholder="Nome do Curso" />
       </div>
@@ -55,7 +55,7 @@
       </div>
 
       <div>
-        <table border="1px">
+    <table border="1px">
           <thead>
             <tr>
               <th>Nome do Curso   </th>
@@ -72,8 +72,8 @@
               <td>{{ curso.valor }}</td>
               <td>{{ curso.cargaHoraria }}</td>
               <td>
-                <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
-                    <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>
+               <!-- <button type="button" class="btn btn-primary" onclick="location.href='{{ url_for('update_curso', id=curso.id) }}'">Atualizar</button>
+                    <button type="button" class="btn btn-danger" onclick="location.href='{{ url_for('delete_curso', id=curso.id) }}'">Excluir</button>!-->
               </td>
             </tr>
             <input type="submit" class="btn btn-primary" value="Atualizar"onclick="location.href='{{ url_for('atualiza_curso', id=curso.id) }}'">

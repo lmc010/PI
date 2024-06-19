@@ -14,7 +14,7 @@ def init_app(app):
     @app.before_request
     def check_auth():
         # Rotas que não precisam de autenticação
-        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar','cadCurso' ]
+        routes = ['login', 'cadastro', 'home', 'perfil','curso','video','editar','cadCurso','catalogo' ]
 
         # Se a rota atual não requer autenticação, permite o acesso
         if request.endpoint in routes or request.path.startswith('/static/'):
@@ -94,7 +94,14 @@ def init_app(app):
             return redirect(url_for('cadCurso'))        
         return render_template('cadCurso.html', curso=curso)
     
-    @app.route('/editCurso', methods=['GET', 'POST'])
+    @app.route('/catalogo')
+    def cursos():
+         if request.method =='POST':
+            if request.form.get('nomeCurso') and request.form.get('descricao') and request.form.get('valor') and request.form.get('cargaHoraria'):
+                cursoList.append({'Curso':request.form.get('nomeCurso'),'Descrição':request.form.get('descricao'),'Valor':request.form.get('valor'),'Carga Horaria':request.form.get('cargaHoraria')})        
+         return render_template('catalogo.html', cursoList=cursoList)
+
+    @app.route('/ed itCurso', methods=['GET', 'POST'])
     def editCurso():
         curso = Curso.query.get_or_404()
         if request.method == 'POST':
@@ -107,13 +114,13 @@ def init_app(app):
             return redirect(url_for('home'))
         return render_template('editCurso.html')
     
-    @app.route('deletCurso')
+    '''@app.route('deletCurso')
     def deleteCurso():
         curso = Curso.query.get_or_404()
         db.session.delete(curso)
         db.session.commit()
         flash('Curso deletado com sucesso!', 'warning')
-        return redirect(url_for('editCurso'))         
+        return redirect(url_for('editCurso'))'''         
                   
                 
     @app.route('/home')
@@ -136,6 +143,8 @@ def init_app(app):
     @app.route('/curso')
     def curso():
         return render_template('Curso.html')
+    
+    
     
     
     
