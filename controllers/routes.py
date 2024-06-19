@@ -98,12 +98,12 @@ def init_app(app):
     def cursos():
          if request.method =='POST':
             if request.form.get('nomeCurso') and request.form.get('descricao') and request.form.get('valor') and request.form.get('cargaHoraria'):
-                cursoList.append({'Curso':request.form.get('nomeCurso'),'Descrição':request.form.get('descricao'),'Valor':request.form.get('valor'),'Carga Horaria':request.form.get('cargaHoraria')})        
+                cursoList.append({'Nome Curso':request.form.get('nomeCurso'),'Descrição':request.form.get('descricao'),'Valor':request.form.get('valor'),'Carga Horaria':request.form.get('cargaHoraria')})        
          return render_template('catalogo.html', cursoList=cursoList)
 
-    @app.route('/ed itCurso', methods=['GET', 'POST'])
-    def editCurso():
-        curso = Curso.query.get_or_404()
+    @app.route('/update_curso/<int:id>', methods=['GET', 'POST'])
+    def editCurso(id):
+        curso = Curso.query.get_or_404(id)
         if request.method == 'POST':
             curso.nomeCurso = request.form['nomeCurso']
             curso.descricao = request.form['descricao']
@@ -111,16 +111,16 @@ def init_app(app):
             curso.valor = request.form['valor']
             db.session.commit()
             flash('Curso editado com sucesso!', 'success')
-            return redirect(url_for('home'))
+            return redirect(url_for('cursos'))
         return render_template('editCurso.html')
     
-    '''@app.route('deletCurso')
-    def deleteCurso():
-        curso = Curso.query.get_or_404()
+    @app.route('/deleteCurso/<int:id>')
+    def deleteCurso(id):
+        curso = Curso.query.get_or_404(id)
         db.session.delete(curso)
         db.session.commit()
         flash('Curso deletado com sucesso!', 'warning')
-        return redirect(url_for('editCurso'))'''         
+        return redirect(url_for('cursos'))       
                   
                 
     @app.route('/home')
